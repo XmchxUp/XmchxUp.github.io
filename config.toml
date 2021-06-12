@@ -1,0 +1,44 @@
+baseURL = "https://xmchxup.github.io"
+languageCode = "en-us"
+title = "Kevin Sun"
+theme = "ink"
+paginate = 5
+
+copyright = "© Kevin Sun"
+
+# Code Highlight
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+googleAnalytics = "UA-159953206-1"
+
+[params]
+	subtitle = "You can learn anything"
+
+	# Optional 64x64 avatar image.
+	avatar = "https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg"
+
+	# Content types to disable Disqus on.
+	disableDisqusTypes = ["page"]
+	
+	featherIconsCDN = true
+
+	mode = "auto" # "dark" or "auto"
+	# customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+	# customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/XmchxUp"
+
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
+
+[taxonomies]
+   tag = "tags"
