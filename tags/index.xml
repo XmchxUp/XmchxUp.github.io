@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kevin Sun</title>
+    <link>https://xmchxup.github.io/tags/</link>
+    <description>Recent content in Tags on Kevin Sun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Kevin Sun</copyright>
+    <lastBuildDate>Sun, 18 Mar 2018 12:13:32 +0530</lastBuildDate><atom:link href="https://xmchxup.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Procrastinating</title>
+      <link>https://xmchxup.github.io/tags/procrastinating/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
+      
+      <guid>https://xmchxup.github.io/tags/procrastinating/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Space</title>
+      <link>https://xmchxup.github.io/tags/space/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
+      
+      <guid>https://xmchxup.github.io/tags/space/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Primer</title>
+      <link>https://xmchxup.github.io/tags/primer/</link>
+      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
+      
+      <guid>https://xmchxup.github.io/tags/primer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>todo</title>
+      <link>https://xmchxup.github.io/tags/todo/</link>
+      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
+      
+      <guid>https://xmchxup.github.io/tags/todo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

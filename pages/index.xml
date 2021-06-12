@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Kevin Sun</title>
+    <link>https://xmchxup.github.io/pages/</link>
+    <description>Recent content in Pages on Kevin Sun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Kevin Sun</copyright>
+    <lastBuildDate>Sat, 12 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://xmchxup.github.io/pages/about/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/pages/about/</guid>
+      <description>19 级学生，努力学习。</description>
+    </item>
+    
+    <item>
+      <title>Build things for fun, for all</title>
+      <link>https://xmchxup.github.io/pages/projects/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/pages/projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
