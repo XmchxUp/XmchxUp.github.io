@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Kevin Sun</copyright>
-    <lastBuildDate>Sat, 12 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARTS计划</title>
+      <link>https://xmchxup.github.io/pages/arts/</link>
+      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/pages/arts/</guid>
+      <description>周计划
+  Algorithm 每周一道leetcode算法题 Review 阅读并点评一篇英文技术文章 Tip 学习一个技术技巧 Share 分享一篇有观点和思考的技术文章  📝尝试着进行ARTS打卡计划&amp;hellip;</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>https://xmchxup.github.io/pages/about/</link>
