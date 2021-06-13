@@ -12,6 +12,8 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-159953206-1"
+# Your Disqus sortname.
+disqusShortname = "blog-evvznokjet"
 
 [params]
 	subtitle = "You can learn anything"
