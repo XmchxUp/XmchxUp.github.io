@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Kevin Sun</copyright>
-    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于我这些年的一些记录</title>
+      <link>https://xmchxup.github.io/pages/years/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/pages/years/</guid>
+      <description> 2021  </description>
+    </item>
+    
     <item>
       <title>ARTS计划</title>
       <link>https://xmchxup.github.io/pages/arts/</link>
@@ -15,7 +24,7 @@
       
       <guid>https://xmchxup.github.io/pages/arts/</guid>
       <description>周计划
-  Algorithm 每周一道leetcode算法题 Review 阅读并点评一篇英文技术文章 Tip 学习一个技术技巧 Share 分享一篇有观点和思考的技术文章  📝尝试着进行ARTS打卡计划&amp;hellip;</description>
+  Algorithm 每周一道 leetcode 算法题 Review 阅读并点评一篇英文技术文章 Tip 学习一个技术技巧 Share 分享一篇有观点和思考的技术文章  📝 尝试着进行ARTS打卡计划&amp;hellip;</description>
     </item>
     
     <item>
@@ -24,7 +33,7 @@
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xmchxup.github.io/pages/about/</guid>
-      <description>我，一个00年、黑头发、戴眼镜的小伙子。未来以Java谋生，现先打好基础。</description>
+      <description>我，一个 00 年、黑头发、戴眼镜的小伙子。未来以 Java 谋生，现先打好基础。</description>
     </item>
     
     <item>
@@ -33,7 +42,7 @@
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xmchxup.github.io/pages/projects/</guid>
-      <description>Web Project  VoteSystem 一个简单的JavaWeb投票系统 GradeSystem 一个简单的毕设评分系统  </description>
+      <description>Web Project  VoteSystem 一个简单的 JavaWeb 投票系统 GradeSystem 一个简单的毕设评分系统  </description>
     </item>
     
   </channel>
