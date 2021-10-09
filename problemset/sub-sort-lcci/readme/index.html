@@ -1,147 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-面试题 16.16. 部分排序 题目描述 给定一个整数数组，编写一个函数，找出索引m和n，只要将索引区间[m,n]的元素排好序，整个数组就是有序的。注意：n-m尽量最小，也就是说，找出符合条件的最短序列。函数返回值为[m,n]，若不存在这样的m和n（例如整个数组是有序的），请返回[-1,-1]。
-示例：
-输入： [1,2,4,7,10,11,7,12,6,7,16,18,19]输出： [3,9]提示：
-0 相关话题  栈 贪心 数组 双指针 排序 单调栈  相似题目 ">
-
-<meta itemprop="wordCount" content="25">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-面试题 16.16. 部分排序 题目描述 给定一个整数数组，编写一个函数，找出索引m和n，只要将索引区间[m,n]的元素排好序，整个数组就是有序的。注意：n-m尽量最小，也就是说，找出符合条件的最短序列。函数返回值为[m,n]，若不存在这样的m和n（例如整个数组是有序的），请返回[-1,-1]。
-示例：
-输入： [1,2,4,7,10,11,7,12,6,7,16,18,19]输出： [3,9]提示：
-0 相关话题  栈 贪心 数组 双指针 排序 单调栈  相似题目 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/sub-sort-lcci/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-面试题 16.16. 部分排序 题目描述 给定一个整数数组，编写一个函数，找出索引m和n，只要将索引区间[m,n]的元素排好序，整个数组就是有序的。注意：n-m尽量最小，也就是说，找出符合条件的最短序列。函数返回值为[m,n]，若不存在这样的m和n（例如整个数组是有序的），请返回[-1,-1]。
-示例：
-输入： [1,2,4,7,10,11,7,12,6,7,16,18,19]输出： [3,9]提示：
-0 相关话题  栈 贪心 数组 双指针 排序 单调栈  相似题目 "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="面试题-1616-部分排序httpsleetcode-cncomproblemssub-sort-lcci"><a href="https://leetcode-cn.com/problems/sub-sort-lcci/">面试题 16.16. 部分排序</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>给定一个整数数组，编写一个函数，找出索引<code>m</code>和<code>n</code>，只要将索引区间<code>[m,n]</code>的元素排好序，整个数组就是有序的。注意：<code>n-m</code>尽量最小，也就是说，找出符合条件的最短序列。函数返回值为<code>[m,n]</code>，若不存在这样的<code>m</code>和<code>n</code>（例如整个数组是有序的），请返回<code>[-1,-1]</code>。</p>
-<p><strong>示例：</strong></p>
-<pre><strong>输入：</strong> [1,2,4,7,10,11,7,12,6,7,16,18,19]
-<strong>输出：</strong> [3,9]
-</pre>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>0 <= len(array) <= 1000000</code></li>
-</ul>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/stack">栈</a></li>
-<li><a href="https://leetcode-cn.com/tag/greedy">贪心</a></li>
-<li><a href="https://leetcode-cn.com/tag/array">数组</a></li>
-<li><a href="https://leetcode-cn.com/tag/two-pointers">双指针</a></li>
-<li><a href="https://leetcode-cn.com/tag/sorting">排序</a></li>
-<li><a href="https://leetcode-cn.com/tag/monotonic-stack">单调栈</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

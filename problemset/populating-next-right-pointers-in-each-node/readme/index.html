@@ -1,192 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-116. 填充每个节点的下一个右侧节点指针 题目描述 给定一个 完美二叉树 ，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
-struct Node {int val;Node *left;Node *right;Node *next;}填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。
-初始状态下，所有 next 指针都被设置为 NULL。
- 进阶：
-你只能使用常量级额外空间。使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。 示例：
-输入：root = [1,2,3,4,5,6,7]输出：[1,#,2,3,#,4,5,6,7,#]解释：给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 B 所示。序列化的输出按层序遍历排列，同一层节点由 next 指针连接，&#39;#&#39; 标志着每一层的结束。 提示：
-树中节点的数量少于 4096-1000 相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目  填充每个节点的下一个右侧节点指针 II 二叉树的右视图  ">
-
-<meta itemprop="wordCount" content="64">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-116. 填充每个节点的下一个右侧节点指针 题目描述 给定一个 完美二叉树 ，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
-struct Node {int val;Node *left;Node *right;Node *next;}填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。
-初始状态下，所有 next 指针都被设置为 NULL。
- 进阶：
-你只能使用常量级额外空间。使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。 示例：
-输入：root = [1,2,3,4,5,6,7]输出：[1,#,2,3,#,4,5,6,7,#]解释：给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 B 所示。序列化的输出按层序遍历排列，同一层节点由 next 指针连接，&#39;#&#39; 标志着每一层的结束。 提示：
-树中节点的数量少于 4096-1000 相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目  填充每个节点的下一个右侧节点指针 II 二叉树的右视图  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/populating-next-right-pointers-in-each-node/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-116. 填充每个节点的下一个右侧节点指针 题目描述 给定一个 完美二叉树 ，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
-struct Node {int val;Node *left;Node *right;Node *next;}填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 NULL。
-初始状态下，所有 next 指针都被设置为 NULL。
- 进阶：
-你只能使用常量级额外空间。使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。 示例：
-输入：root = [1,2,3,4,5,6,7]输出：[1,#,2,3,#,4,5,6,7,#]解释：给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 B 所示。序列化的输出按层序遍历排列，同一层节点由 next 指针连接，&#39;#&#39; 标志着每一层的结束。 提示：
-树中节点的数量少于 4096-1000 相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目  填充每个节点的下一个右侧节点指针 II 二叉树的右视图  "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="116-填充每个节点的下一个右侧节点指针httpsleetcode-cncomproblemspopulating-next-right-pointers-in-each-node"><a href="https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/">116. 填充每个节点的下一个右侧节点指针</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>给定一个 <strong>完美二叉树 </strong>，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：</p>
-
-<pre>
-struct Node {
-  int val;
-  Node *left;
-  Node *right;
-  Node *next;
-}</pre>
-
-<p>填充它的每个 next 指针，让这个指针指向其下一个右侧节点。如果找不到下一个右侧节点，则将 next 指针设置为 <code>NULL</code>。</p>
-
-<p>初始状态下，所有 next 指针都被设置为 <code>NULL</code>。</p>
-
-<p> </p>
-
-<p><strong>进阶：</strong></p>
-
-<ul>
-	<li>你只能使用常量级额外空间。</li>
-	<li>使用递归解题也符合要求，本题中递归程序占用的栈空间不算做额外的空间复杂度。</li>
-</ul>
-
-<p> </p>
-
-<p><strong>示例：</strong></p>
-
-<p><img alt="" src="https://assets.leetcode.com/uploads/2019/02/14/116_sample.png" style="height: 205px; width: 600px;" /></p>
-
-<pre>
-<b>输入：</b>root = [1,2,3,4,5,6,7]
-<b>输出：</b>[1,#,2,3,#,4,5,6,7,#]
-<b>解释：</b>给定二叉树如图 A 所示，你的函数应该填充它的每个 next 指针，以指向其下一个右侧节点，如图 B 所示。序列化的输出按层序遍历排列，同一层节点由 next 指针连接，'#' 标志着每一层的结束。
-</pre>
-
-<p> </p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>树中节点的数量少于 <code>4096</code></li>
-	<li><code>-1000 <= node.val <= 1000</code></li>
-</ul>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/tree">树</a></li>
-<li><a href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></li>
-<li><a href="https://leetcode-cn.com/tag/breadth-first-search">广度优先搜索</a></li>
-<li><a href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-<ul>
-<li><a href="../populating-next-right-pointers-in-each-node-ii/README.md">填充每个节点的下一个右侧节点指针 II</a></li>
-<li><a href="../binary-tree-right-side-view/README.md">二叉树的右视图</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

@@ -1,191 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-563. 二叉树的坡度 题目描述 给定一个二叉树，计算 整个树 的坡度 。
-一个树的 节点的坡度 定义即为，该节点左子树的节点之和和右子树节点之和的 差的绝对值 。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。
-整个树 的坡度就是其所有节点的坡度之和。
- 示例 1：
-输入：root = [1,2,3]输出：1解释：节点 2 的坡度：|0-0| = 0（没有子节点）节点 3 的坡度：|0-0| = 0（没有子节点）节点 1 的坡度：|2-3| = 1（左子树就是左子节点，所以和是 2 ；右子树就是右子节点，所以和是 3 ）坡度总和：0 &#43; 0 &#43; 1 = 1示例 2：
-输入：root = [4,2,9,3,5,null,7]输出：15解释：节点 3 的坡度：|0-0| = 0（没有子节点）节点 5 的坡度：|0-0| = 0（没有子节点）节点 7 的坡度：|0-0| = 0（没有子节点）节点 2 的坡度：|3-5| = 2（左子树就是左子节点，所以和是 3 ；右子树就是右子节点，所以和是 5 ）节点 9 的坡度：|0-7| = 7（没有左子树，所以和是 0 ；右子树正好是右子节点，所以和是 7 ）节点 4 的坡度：|(3&#43;5&#43;2)-(9&#43;7)| = |10-16| = 6（左子树值为 3、5 和 2 ，和是 10 ；右子树值为 9 和 7 ，和是 16 ）坡度总和：0 &#43; 0 &#43; 0 &#43; 2 &#43; 7 &#43; 6 = 15示例 3：">
-
-<meta itemprop="wordCount" content="145">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-563. 二叉树的坡度 题目描述 给定一个二叉树，计算 整个树 的坡度 。
-一个树的 节点的坡度 定义即为，该节点左子树的节点之和和右子树节点之和的 差的绝对值 。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。
-整个树 的坡度就是其所有节点的坡度之和。
- 示例 1：
-输入：root = [1,2,3]输出：1解释：节点 2 的坡度：|0-0| = 0（没有子节点）节点 3 的坡度：|0-0| = 0（没有子节点）节点 1 的坡度：|2-3| = 1（左子树就是左子节点，所以和是 2 ；右子树就是右子节点，所以和是 3 ）坡度总和：0 &#43; 0 &#43; 1 = 1示例 2：
-输入：root = [4,2,9,3,5,null,7]输出：15解释：节点 3 的坡度：|0-0| = 0（没有子节点）节点 5 的坡度：|0-0| = 0（没有子节点）节点 7 的坡度：|0-0| = 0（没有子节点）节点 2 的坡度：|3-5| = 2（左子树就是左子节点，所以和是 3 ；右子树就是右子节点，所以和是 5 ）节点 9 的坡度：|0-7| = 7（没有左子树，所以和是 0 ；右子树正好是右子节点，所以和是 7 ）节点 4 的坡度：|(3&#43;5&#43;2)-(9&#43;7)| = |10-16| = 6（左子树值为 3、5 和 2 ，和是 10 ；右子树值为 9 和 7 ，和是 16 ）坡度总和：0 &#43; 0 &#43; 0 &#43; 2 &#43; 7 &#43; 6 = 15示例 3：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/binary-tree-tilt/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-563. 二叉树的坡度 题目描述 给定一个二叉树，计算 整个树 的坡度 。
-一个树的 节点的坡度 定义即为，该节点左子树的节点之和和右子树节点之和的 差的绝对值 。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。
-整个树 的坡度就是其所有节点的坡度之和。
- 示例 1：
-输入：root = [1,2,3]输出：1解释：节点 2 的坡度：|0-0| = 0（没有子节点）节点 3 的坡度：|0-0| = 0（没有子节点）节点 1 的坡度：|2-3| = 1（左子树就是左子节点，所以和是 2 ；右子树就是右子节点，所以和是 3 ）坡度总和：0 &#43; 0 &#43; 1 = 1示例 2：
-输入：root = [4,2,9,3,5,null,7]输出：15解释：节点 3 的坡度：|0-0| = 0（没有子节点）节点 5 的坡度：|0-0| = 0（没有子节点）节点 7 的坡度：|0-0| = 0（没有子节点）节点 2 的坡度：|3-5| = 2（左子树就是左子节点，所以和是 3 ；右子树就是右子节点，所以和是 5 ）节点 9 的坡度：|0-7| = 7（没有左子树，所以和是 0 ；右子树正好是右子节点，所以和是 7 ）节点 4 的坡度：|(3&#43;5&#43;2)-(9&#43;7)| = |10-16| = 6（左子树值为 3、5 和 2 ，和是 10 ；右子树值为 9 和 7 ，和是 16 ）坡度总和：0 &#43; 0 &#43; 0 &#43; 2 &#43; 7 &#43; 6 = 15示例 3："/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="563-二叉树的坡度httpsleetcode-cncomproblemsbinary-tree-tilt"><a href="https://leetcode-cn.com/problems/binary-tree-tilt/">563. 二叉树的坡度</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>给定一个二叉树，计算 <strong>整个树 </strong>的坡度 。</p>
-
-<p>一个树的<strong> 节点的坡度 </strong>定义即为，该节点左子树的节点之和和右子树节点之和的 <strong>差的绝对值 </strong>。如果没有左子树的话，左子树的节点之和为 0 ；没有右子树的话也是一样。空结点的坡度是 0 。</p>
-
-<p><strong>整个树</strong> 的坡度就是其所有节点的坡度之和。</p>
-
-<p> </p>
-
-<p><strong>示例 1：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt1.jpg" style="width: 712px; height: 182px;" />
-<pre>
-<strong>输入：</strong>root = [1,2,3]
-<strong>输出：</strong>1
-<strong>解释：</strong>
-节点 2 的坡度：|0-0| = 0（没有子节点）
-节点 3 的坡度：|0-0| = 0（没有子节点）
-节点 1 的坡度：|2-3| = 1（左子树就是左子节点，所以和是 2 ；右子树就是右子节点，所以和是 3 ）
-坡度总和：0 + 0 + 1 = 1
-</pre>
-
-<p><strong>示例 2：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt2.jpg" style="width: 800px; height: 203px;" />
-<pre>
-<strong>输入：</strong>root = [4,2,9,3,5,null,7]
-<strong>输出：</strong>15
-<strong>解释：</strong>
-节点 3 的坡度：|0-0| = 0（没有子节点）
-节点 5 的坡度：|0-0| = 0（没有子节点）
-节点 7 的坡度：|0-0| = 0（没有子节点）
-节点 2 的坡度：|3-5| = 2（左子树就是左子节点，所以和是 3 ；右子树就是右子节点，所以和是 5 ）
-节点 9 的坡度：|0-7| = 7（没有左子树，所以和是 0 ；右子树正好是右子节点，所以和是 7 ）
-节点 4 的坡度：|(3+5+2)-(9+7)| = |10-16| = 6（左子树值为 3、5 和 2 ，和是 10 ；右子树值为 9 和 7 ，和是 16 ）
-坡度总和：0 + 0 + 0 + 2 + 7 + 6 = 15
-</pre>
-
-<p><strong>示例 3：</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/20/tilt3.jpg" style="width: 800px; height: 293px;" />
-<pre>
-<strong>输入：</strong>root = [21,7,14,1,1,2,2,3,3]
-<strong>输出：</strong>9
-</pre>
-
-<p> </p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>树中节点数目的范围在 <code>[0, 10<sup>4</sup>]</code> 内</li>
-	<li><code>-1000 <= Node.val <= 1000</code></li>
-</ul>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/tree">树</a></li>
-<li><a href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></li>
-<li><a href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

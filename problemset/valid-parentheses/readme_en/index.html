@@ -1,195 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="[20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)">
-<meta itemprop="description" content="| English | 简体中文 |
-20. Valid Parentheses Description Given a string s containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets.Open brackets must be closed in the correct order.&nbsp;
-Example 1:
-Input: s = &quot;()&quot;Output: trueExample 2:">
-
-<meta itemprop="wordCount" content="132">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="[20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)" />
-<meta property="og:description" content="| English | 简体中文 |
-20. Valid Parentheses Description Given a string s containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets.Open brackets must be closed in the correct order.&nbsp;
-Example 1:
-Input: s = &quot;()&quot;Output: trueExample 2:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/valid-parentheses/readme_en/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)"/>
-<meta name="twitter:description" content="| English | 简体中文 |
-20. Valid Parentheses Description Given a string s containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid.
-An input string is valid if:
-Open brackets must be closed by the same type of brackets.Open brackets must be closed in the correct order.&nbsp;
-Example 1:
-Input: s = &quot;()&quot;Output: trueExample 2:"/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title">[20. Valid Parentheses](https://leetcode-cn.com/problems/valid-parentheses/)</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| English | <a href="../readme">简体中文</a> |</p>
-<h1 id="20-valid-parentheseshttpsleetcode-cncomproblemsvalid-parentheses"><a href="https://leetcode-cn.com/problems/valid-parentheses/">20. Valid Parentheses</a></h1>
-<h2 id="description">Description</h2>
-
-
-<p>Given a string <code>s</code> containing just the characters <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code>, <code>&#39;{&#39;</code>, <code>&#39;}&#39;</code>, <code>&#39;[&#39;</code> and <code>&#39;]&#39;</code>, determine if the input string is valid.</p>
-
-<p>An input string is valid if:</p>
-
-<ol>
-	<li>Open brackets must be closed by the same type of brackets.</li>
-	<li>Open brackets must be closed in the correct order.</li>
-</ol>
-
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-
-<pre>
-<strong>Input:</strong> s = &quot;()&quot;
-<strong>Output:</strong> true
-</pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre>
-<strong>Input:</strong> s = &quot;()[]{}&quot;
-<strong>Output:</strong> true
-</pre>
-
-<p><strong>Example 3:</strong></p>
-
-<pre>
-<strong>Input:</strong> s = &quot;(]&quot;
-<strong>Output:</strong> false
-</pre>
-
-<p><strong>Example 4:</strong></p>
-
-<pre>
-<strong>Input:</strong> s = &quot;([)]&quot;
-<strong>Output:</strong> false
-</pre>
-
-<p><strong>Example 5:</strong></p>
-
-<pre>
-<strong>Input:</strong> s = &quot;{[]}&quot;
-<strong>Output:</strong> true
-</pre>
-
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
-
-<ul>
-	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
-	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
-</ul>
-
-
-<h2 id="related-topics">Related Topics</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/stack">Stack</a></li>
-<li><a href="https://leetcode-cn.com/tag/string">String</a></li>
-</ul>
-<h2 id="similar-questions">Similar Questions</h2>
-<ul>
-<li><a href="../generate-parentheses/README_EN.md">Generate Parentheses</a></li>
-<li><a href="../longest-valid-parentheses/README_EN.md">Longest Valid Parentheses</a></li>
-<li><a href="../remove-invalid-parentheses/README_EN.md">Remove Invalid Parentheses</a></li>
-<li><a href="../check-if-word-is-valid-after-substitutions/README_EN.md">Check If Word Is Valid After Substitutions</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

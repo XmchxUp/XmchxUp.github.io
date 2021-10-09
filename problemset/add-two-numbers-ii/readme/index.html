@@ -1,192 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-445. 两数相加 II 题目描述 给你两个 非空 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。
-你可以假设除了数字 0 之外，这两个数字都不会以零开头。
- 示例1：
-输入：l1 = [7,2,4,3], l2 = [5,6,4]输出：[7,8,0,7]示例2：
-输入：l1 = [2,4,3], l2 = [5,6,4]输出：[8,0,7]示例3：
-输入：l1 = [0], l2 = [0]输出：[0] 提示：
-链表的长度范围为 [1, 100]0 输入数据保证链表代表的数字无前导 0 进阶：如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。
-相关话题  栈 链表 数学  相似题目  两数相加  ">
-
-<meta itemprop="wordCount" content="53">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-445. 两数相加 II 题目描述 给你两个 非空 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。
-你可以假设除了数字 0 之外，这两个数字都不会以零开头。
- 示例1：
-输入：l1 = [7,2,4,3], l2 = [5,6,4]输出：[7,8,0,7]示例2：
-输入：l1 = [2,4,3], l2 = [5,6,4]输出：[8,0,7]示例3：
-输入：l1 = [0], l2 = [0]输出：[0] 提示：
-链表的长度范围为 [1, 100]0 输入数据保证链表代表的数字无前导 0 进阶：如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。
-相关话题  栈 链表 数学  相似题目  两数相加  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/add-two-numbers-ii/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-445. 两数相加 II 题目描述 给你两个 非空 链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。
-你可以假设除了数字 0 之外，这两个数字都不会以零开头。
- 示例1：
-输入：l1 = [7,2,4,3], l2 = [5,6,4]输出：[7,8,0,7]示例2：
-输入：l1 = [2,4,3], l2 = [5,6,4]输出：[8,0,7]示例3：
-输入：l1 = [0], l2 = [0]输出：[0] 提示：
-链表的长度范围为 [1, 100]0 输入数据保证链表代表的数字无前导 0 进阶：如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。
-相关话题  栈 链表 数学  相似题目  两数相加  "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="445-两数相加-iihttpsleetcode-cncomproblemsadd-two-numbers-ii"><a href="https://leetcode-cn.com/problems/add-two-numbers-ii/">445. 两数相加 II</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>给你两个 <strong>非空 </strong>链表来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。</p>
-
-<p>你可以假设除了数字 0 之外，这两个数字都不会以零开头。</p>
-
-<p> </p>
-
-<p><strong>示例1：</strong></p>
-
-<p><img alt="" src="https://pic.leetcode-cn.com/1626420025-fZfzMX-image.png" style="width: 302px; " /></p>
-
-<pre>
-<strong>输入：</strong>l1 = [7,2,4,3], l2 = [5,6,4]
-<strong>输出：</strong>[7,8,0,7]
-</pre>
-
-<p><strong>示例2：</strong></p>
-
-<pre>
-<strong>输入：</strong>l1 = [2,4,3], l2 = [5,6,4]
-<strong>输出：</strong>[8,0,7]
-</pre>
-
-<p><strong>示例3：</strong></p>
-
-<pre>
-<strong>输入：</strong>l1 = [0], l2 = [0]
-<strong>输出：</strong>[0]
-</pre>
-
-<p> </p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>链表的长度范围为<code> [1, 100]</code></li>
-	<li><code>0 <= node.val <= 9</code></li>
-	<li>输入数据保证链表代表的数字无前导 0</li>
-</ul>
-
-<p> </p>
-
-<p><strong>进阶：</strong>如果输入链表不能修改该如何处理？换句话说，不能对列表中的节点进行翻转。</p>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/stack">栈</a></li>
-<li><a href="https://leetcode-cn.com/tag/linked-list">链表</a></li>
-<li><a href="https://leetcode-cn.com/tag/math">数学</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-<ul>
-<li><a href="../add-two-numbers/README.md">两数相加</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

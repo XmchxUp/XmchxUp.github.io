@@ -1,177 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-707. 设计链表 题目描述 设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val&nbsp;和&nbsp;next。val&nbsp;是当前节点的值，next&nbsp;是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性&nbsp;prev&nbsp;以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。
-在链表类中实现这些功能：
-get(index)：获取链表中第&nbsp;index&nbsp;个节点的值。如果索引无效，则返回-1。addAtHead(val)：在链表的第一个元素之前添加一个值为&nbsp;val&nbsp;的节点。插入后，新节点将成为链表的第一个节点。addAtTail(val)：将值为&nbsp;val 的节点追加到链表的最后一个元素。addAtIndex(index,val)：在链表中的第&nbsp;index&nbsp;个节点之前添加值为&nbsp;val&nbsp; 的节点。如果&nbsp;index&nbsp;等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。deleteAtIndex(index)：如果索引&nbsp;index 有效，则删除链表中的第&nbsp;index 个节点。&nbsp;
-示例：
-MyLinkedList linkedList = new MyLinkedList();linkedList.addAtHead(1);linkedList.addAtTail(3);linkedList.addAtIndex(1,2); //链表变为1-&gt; 2-&gt; 3linkedList.get(1); //返回2linkedList.deleteAtIndex(1); //现在链表是1-&gt; 3linkedList.get(1); //返回3&nbsp;
-提示：
-所有val值都在&nbsp;[1, 1000]&nbsp;之内。操作次数将在&nbsp;&nbsp;[1, 1000]&nbsp;之内。请不要使用内置的 LinkedList 库。相关话题  设计 链表  相似题目 ">
-
-<meta itemprop="wordCount" content="56">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-707. 设计链表 题目描述 设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val&nbsp;和&nbsp;next。val&nbsp;是当前节点的值，next&nbsp;是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性&nbsp;prev&nbsp;以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。
-在链表类中实现这些功能：
-get(index)：获取链表中第&nbsp;index&nbsp;个节点的值。如果索引无效，则返回-1。addAtHead(val)：在链表的第一个元素之前添加一个值为&nbsp;val&nbsp;的节点。插入后，新节点将成为链表的第一个节点。addAtTail(val)：将值为&nbsp;val 的节点追加到链表的最后一个元素。addAtIndex(index,val)：在链表中的第&nbsp;index&nbsp;个节点之前添加值为&nbsp;val&nbsp; 的节点。如果&nbsp;index&nbsp;等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。deleteAtIndex(index)：如果索引&nbsp;index 有效，则删除链表中的第&nbsp;index 个节点。&nbsp;
-示例：
-MyLinkedList linkedList = new MyLinkedList();linkedList.addAtHead(1);linkedList.addAtTail(3);linkedList.addAtIndex(1,2); //链表变为1-&gt; 2-&gt; 3linkedList.get(1); //返回2linkedList.deleteAtIndex(1); //现在链表是1-&gt; 3linkedList.get(1); //返回3&nbsp;
-提示：
-所有val值都在&nbsp;[1, 1000]&nbsp;之内。操作次数将在&nbsp;&nbsp;[1, 1000]&nbsp;之内。请不要使用内置的 LinkedList 库。相关话题  设计 链表  相似题目 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/design-linked-list/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-707. 设计链表 题目描述 设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：val&nbsp;和&nbsp;next。val&nbsp;是当前节点的值，next&nbsp;是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性&nbsp;prev&nbsp;以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。
-在链表类中实现这些功能：
-get(index)：获取链表中第&nbsp;index&nbsp;个节点的值。如果索引无效，则返回-1。addAtHead(val)：在链表的第一个元素之前添加一个值为&nbsp;val&nbsp;的节点。插入后，新节点将成为链表的第一个节点。addAtTail(val)：将值为&nbsp;val 的节点追加到链表的最后一个元素。addAtIndex(index,val)：在链表中的第&nbsp;index&nbsp;个节点之前添加值为&nbsp;val&nbsp; 的节点。如果&nbsp;index&nbsp;等于链表的长度，则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。deleteAtIndex(index)：如果索引&nbsp;index 有效，则删除链表中的第&nbsp;index 个节点。&nbsp;
-示例：
-MyLinkedList linkedList = new MyLinkedList();linkedList.addAtHead(1);linkedList.addAtTail(3);linkedList.addAtIndex(1,2); //链表变为1-&gt; 2-&gt; 3linkedList.get(1); //返回2linkedList.deleteAtIndex(1); //现在链表是1-&gt; 3linkedList.get(1); //返回3&nbsp;
-提示：
-所有val值都在&nbsp;[1, 1000]&nbsp;之内。操作次数将在&nbsp;&nbsp;[1, 1000]&nbsp;之内。请不要使用内置的 LinkedList 库。相关话题  设计 链表  相似题目 "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="707-设计链表httpsleetcode-cncomproblemsdesign-linked-list"><a href="https://leetcode-cn.com/problems/design-linked-list/">707. 设计链表</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>设计链表的实现。您可以选择使用单链表或双链表。单链表中的节点应该具有两个属性：<code>val</code>&nbsp;和&nbsp;<code>next</code>。<code>val</code>&nbsp;是当前节点的值，<code>next</code>&nbsp;是指向下一个节点的指针/引用。如果要使用双向链表，则还需要一个属性&nbsp;<code>prev</code>&nbsp;以指示链表中的上一个节点。假设链表中的所有节点都是 0-index 的。</p>
-
-<p>在链表类中实现这些功能：</p>
-
-<ul>
-	<li>get(index)：获取链表中第&nbsp;<code>index</code>&nbsp;个节点的值。如果索引无效，则返回<code>-1</code>。</li>
-	<li>addAtHead(val)：在链表的第一个元素之前添加一个值为&nbsp;<code>val</code>&nbsp;的节点。插入后，新节点将成为链表的第一个节点。</li>
-	<li>addAtTail(val)：将值为&nbsp;<code>val</code> 的节点追加到链表的最后一个元素。</li>
-	<li>addAtIndex(index,val)：在链表中的第&nbsp;<code>index</code>&nbsp;个节点之前添加值为&nbsp;<code>val</code>&nbsp; 的节点。如果&nbsp;<code>index</code>&nbsp;等于链表的长度，则该节点将附加到链表的末尾。如果 <code>index</code> 大于链表长度，则不会插入节点。如果<code>index</code>小于0，则在头部插入节点。</li>
-	<li>deleteAtIndex(index)：如果索引&nbsp;<code>index</code> 有效，则删除链表中的第&nbsp;<code>index</code> 个节点。</li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p><strong>示例：</strong></p>
-
-<pre>MyLinkedList linkedList = new MyLinkedList();
-linkedList.addAtHead(1);
-linkedList.addAtTail(3);
-linkedList.addAtIndex(1,2);   //链表变为1-&gt; 2-&gt; 3
-linkedList.get(1);            //返回2
-linkedList.deleteAtIndex(1);  //现在链表是1-&gt; 3
-linkedList.get(1);            //返回3
-</pre>
-
-<p>&nbsp;</p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>所有<code>val</code>值都在&nbsp;<code>[1, 1000]</code>&nbsp;之内。</li>
-	<li>操作次数将在&nbsp;&nbsp;<code>[1, 1000]</code>&nbsp;之内。</li>
-	<li>请不要使用内置的 LinkedList 库。</li>
-</ul>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/design">设计</a></li>
-<li><a href="https://leetcode-cn.com/tag/linked-list">链表</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

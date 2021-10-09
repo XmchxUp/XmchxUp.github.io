@@ -1,176 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[119. Pascal&#39;s Triangle II](https://leetcode-cn.com/problems/pascals-triangle-ii/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="[119. Pascal&#39;s Triangle II](https://leetcode-cn.com/problems/pascals-triangle-ii/)">
-<meta itemprop="description" content="| English | 简体中文 |
-119. Pascal&rsquo;s Triangle II Description Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal&#39;s triangle.
-In Pascal&#39;s triangle, each number is the sum of the two numbers directly above it as shown:
-&nbsp;
-Example 1:
-Input: rowIndex = 3Output: [1,3,3,1]Example 2:
-Input: rowIndex = 0Output: [1]Example 3:
-Input: rowIndex = 1Output: [1,1]&nbsp;
-Constraints:
-0 &lt;= rowIndex &lt;= 33&nbsp;">
-
-<meta itemprop="wordCount" content="95">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="[119. Pascal&#39;s Triangle II](https://leetcode-cn.com/problems/pascals-triangle-ii/)" />
-<meta property="og:description" content="| English | 简体中文 |
-119. Pascal&rsquo;s Triangle II Description Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal&#39;s triangle.
-In Pascal&#39;s triangle, each number is the sum of the two numbers directly above it as shown:
-&nbsp;
-Example 1:
-Input: rowIndex = 3Output: [1,3,3,1]Example 2:
-Input: rowIndex = 0Output: [1]Example 3:
-Input: rowIndex = 1Output: [1,1]&nbsp;
-Constraints:
-0 &lt;= rowIndex &lt;= 33&nbsp;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/pascals-triangle-ii/readme_en/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[119. Pascal&#39;s Triangle II](https://leetcode-cn.com/problems/pascals-triangle-ii/)"/>
-<meta name="twitter:description" content="| English | 简体中文 |
-119. Pascal&rsquo;s Triangle II Description Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal&#39;s triangle.
-In Pascal&#39;s triangle, each number is the sum of the two numbers directly above it as shown:
-&nbsp;
-Example 1:
-Input: rowIndex = 3Output: [1,3,3,1]Example 2:
-Input: rowIndex = 0Output: [1]Example 3:
-Input: rowIndex = 1Output: [1,1]&nbsp;
-Constraints:
-0 &lt;= rowIndex &lt;= 33&nbsp;"/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title">[119. Pascal&#39;s Triangle II](https://leetcode-cn.com/problems/pascals-triangle-ii/)</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| English | <a href="../readme">简体中文</a> |</p>
-<h1 id="119-pascals-triangle-iihttpsleetcode-cncomproblemspascals-triangle-ii"><a href="https://leetcode-cn.com/problems/pascals-triangle-ii/">119. Pascal&rsquo;s Triangle II</a></h1>
-<h2 id="description">Description</h2>
-
-
-<p>Given an integer <code>rowIndex</code>, return the <code>rowIndex<sup>th</sup></code> (<strong>0-indexed</strong>) row of the <strong>Pascal&#39;s triangle</strong>.</p>
-
-<p>In <strong>Pascal&#39;s triangle</strong>, each number is the sum of the two numbers directly above it as shown:</p>
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" style="height:240px; width:260px" />
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<pre><strong>Input:</strong> rowIndex = 3
-<strong>Output:</strong> [1,3,3,1]
-</pre><p><strong>Example 2:</strong></p>
-<pre><strong>Input:</strong> rowIndex = 0
-<strong>Output:</strong> [1]
-</pre><p><strong>Example 3:</strong></p>
-<pre><strong>Input:</strong> rowIndex = 1
-<strong>Output:</strong> [1,1]
-</pre>
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
-
-<ul>
-	<li><code>0 &lt;= rowIndex &lt;= 33</code></li>
-</ul>
-
-<p>&nbsp;</p>
-<p><strong>Follow up:</strong> Could you optimize your algorithm to use only <code>O(rowIndex)</code> extra space?</p>
-
-
-<h2 id="related-topics">Related Topics</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/array">Array</a></li>
-<li><a href="https://leetcode-cn.com/tag/dynamic-programming">Dynamic Programming</a></li>
-</ul>
-<h2 id="similar-questions">Similar Questions</h2>
-<ul>
-<li><a href="../pascals-triangle/README_EN.md">Pascal&rsquo;s Triangle</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

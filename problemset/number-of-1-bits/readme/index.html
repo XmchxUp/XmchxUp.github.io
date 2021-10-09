@@ -1,208 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-191. 位1的个数 题目描述 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 &#39;1&#39; 的个数（也被称为汉明重量）。
- 提示：
-请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 3 中，输入表示有符号整数 -3。 示例 1：
-输入：00000000000000000000000000001011输出：3解释：输入的二进制串 00000000000000000000000000001011 中，共有三位为 &#39;1&#39;。示例 2：
-输入：00000000000000000000000010000000输出：1解释：输入的二进制串 00000000000000000000000010000000 中，共有一位为 &#39;1&#39;。示例 3：
-输入：11111111111111111111111111111101输出：31解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 &#39;1&#39;。 提示：
-输入必须是长度为 32 的 二进制串 。 进阶：
-如果多次调用这个函数，你将如何优化你的算法？相关话题  位运算  相似题目  颠倒二进制位 2 的幂 比特位计数 二进制手表 汉明距离 交替位二进制数 二进制表示中质数个计算置位  ">
-
-<meta itemprop="wordCount" content="66">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-191. 位1的个数 题目描述 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 &#39;1&#39; 的个数（也被称为汉明重量）。
- 提示：
-请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 3 中，输入表示有符号整数 -3。 示例 1：
-输入：00000000000000000000000000001011输出：3解释：输入的二进制串 00000000000000000000000000001011 中，共有三位为 &#39;1&#39;。示例 2：
-输入：00000000000000000000000010000000输出：1解释：输入的二进制串 00000000000000000000000010000000 中，共有一位为 &#39;1&#39;。示例 3：
-输入：11111111111111111111111111111101输出：31解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 &#39;1&#39;。 提示：
-输入必须是长度为 32 的 二进制串 。 进阶：
-如果多次调用这个函数，你将如何优化你的算法？相关话题  位运算  相似题目  颠倒二进制位 2 的幂 比特位计数 二进制手表 汉明距离 交替位二进制数 二进制表示中质数个计算置位  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/number-of-1-bits/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-191. 位1的个数 题目描述 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 &#39;1&#39; 的个数（也被称为汉明重量）。
- 提示：
-请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 3 中，输入表示有符号整数 -3。 示例 1：
-输入：00000000000000000000000000001011输出：3解释：输入的二进制串 00000000000000000000000000001011 中，共有三位为 &#39;1&#39;。示例 2：
-输入：00000000000000000000000010000000输出：1解释：输入的二进制串 00000000000000000000000010000000 中，共有一位为 &#39;1&#39;。示例 3：
-输入：11111111111111111111111111111101输出：31解释：输入的二进制串 11111111111111111111111111111101 中，共有 31 位为 &#39;1&#39;。 提示：
-输入必须是长度为 32 的 二进制串 。 进阶：
-如果多次调用这个函数，你将如何优化你的算法？相关话题  位运算  相似题目  颠倒二进制位 2 的幂 比特位计数 二进制手表 汉明距离 交替位二进制数 二进制表示中质数个计算置位  "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="191-位1的个数httpsleetcode-cncomproblemsnumber-of-1-bits"><a href="https://leetcode-cn.com/problems/number-of-1-bits/">191. 位1的个数</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为<a href="https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E9%87%8D%E9%87%8F" target="_blank">汉明重量</a>）。</p>
-
-<p> </p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。</li>
-	<li>在 Java 中，编译器使用<a href="https://baike.baidu.com/item/二进制补码/5295284" target="_blank">二进制补码</a>记法来表示有符号整数。因此，在上面的 <strong>示例 3</strong> 中，输入表示有符号整数 <code>-3</code>。</li>
-</ul>
-
-<p> </p>
-
-<p><strong>示例 1：</strong></p>
-
-<pre>
-<strong>输入：</strong>00000000000000000000000000001011
-<strong>输出：</strong>3
-<strong>解释：</strong>输入的二进制串 <code><strong>00000000000000000000000000001011</strong> 中，共有三位为 '1'。</code>
-</pre>
-
-<p><strong>示例 2：</strong></p>
-
-<pre>
-<strong>输入：</strong>00000000000000000000000010000000
-<strong>输出：</strong>1
-<strong>解释：</strong>输入的二进制串 <strong>00000000000000000000000010000000</strong> 中，共有一位为 '1'。
-</pre>
-
-<p><strong>示例 3：</strong></p>
-
-<pre>
-<strong>输入：</strong>11111111111111111111111111111101
-<strong>输出：</strong>31
-<strong>解释：</strong>输入的二进制串 <strong>11111111111111111111111111111101</strong> 中，共有 31 位为 '1'。</pre>
-
-<p> </p>
-
-<p><strong>提示：</strong></p>
-
-<ul>
-	<li>输入必须是长度为 <code>32</code> 的 <strong>二进制串</strong> 。</li>
-</ul>
-
-<ul>
-</ul>
-
-<p> </p>
-
-<p><strong>进阶</strong>：</p>
-
-<ul>
-	<li>如果多次调用这个函数，你将如何优化你的算法？</li>
-</ul>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/bit-manipulation">位运算</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-<ul>
-<li><a href="../reverse-bits/README.md">颠倒二进制位</a></li>
-<li><a href="../power-of-two/README.md">2 的幂</a></li>
-<li><a href="../counting-bits/README.md">比特位计数</a></li>
-<li><a href="../binary-watch/README.md">二进制手表</a></li>
-<li><a href="../hamming-distance/README.md">汉明距离</a></li>
-<li><a href="../binary-number-with-alternating-bits/README.md">交替位二进制数</a></li>
-<li><a href="../prime-number-of-set-bits-in-binary-representation/README.md">二进制表示中质数个计算置位</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

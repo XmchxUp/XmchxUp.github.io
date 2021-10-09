@@ -1,171 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="">
-<meta itemprop="description" content="| English | 简体中文 |
-102. 二叉树的层序遍历 题目描述 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
- 示例：
-二叉树：[3,9,20,null,null,15,7],
-3/ \9 20/ \15 7返回其层序遍历结果：
-[[3],[9,20],[15,7]]相关话题  树 广度优先搜索 二叉树  相似题目  二叉树的锯齿形层序遍历 二叉树的层序遍历 II 二叉树的最小深度 二叉树的垂直遍历 二叉树的层平均值 N 叉树的层序遍历 二叉树的堂兄弟节点  ">
-
-<meta itemprop="wordCount" content="43">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="| English | 简体中文 |
-102. 二叉树的层序遍历 题目描述 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
- 示例：
-二叉树：[3,9,20,null,null,15,7],
-3/ \9 20/ \15 7返回其层序遍历结果：
-[[3],[9,20],[15,7]]相关话题  树 广度优先搜索 二叉树  相似题目  二叉树的锯齿形层序遍历 二叉树的层序遍历 II 二叉树的最小深度 二叉树的垂直遍历 二叉树的层平均值 N 叉树的层序遍历 二叉树的堂兄弟节点  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/binary-tree-level-order-traversal/readme/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="| English | 简体中文 |
-102. 二叉树的层序遍历 题目描述 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。
- 示例：
-二叉树：[3,9,20,null,null,15,7],
-3/ \9 20/ \15 7返回其层序遍历结果：
-[[3],[9,20],[15,7]]相关话题  树 广度优先搜索 二叉树  相似题目  二叉树的锯齿形层序遍历 二叉树的层序遍历 II 二叉树的最小深度 二叉树的垂直遍历 二叉树的层平均值 N 叉树的层序遍历 二叉树的堂兄弟节点  "/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title"></h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
-<h1 id="102-二叉树的层序遍历httpsleetcode-cncomproblemsbinary-tree-level-order-traversal"><a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal/">102. 二叉树的层序遍历</a></h1>
-<h2 id="题目描述">题目描述</h2>
-
-
-<p>给你一个二叉树，请你返回其按 <strong>层序遍历</strong> 得到的节点值。 （即逐层地，从左到右访问所有节点）。</p>
-
-<p> </p>
-
-<p><strong>示例：</strong><br />
-二叉树：<code>[3,9,20,null,null,15,7]</code>,</p>
-
-<pre>
-    3
-   / \
-  9  20
-    /  \
-   15   7
-</pre>
-
-<p>返回其层序遍历结果：</p>
-
-<pre>
-[
-  [3],
-  [9,20],
-  [15,7]
-]
-</pre>
-
-
-<h2 id="相关话题">相关话题</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/tree">树</a></li>
-<li><a href="https://leetcode-cn.com/tag/breadth-first-search">广度优先搜索</a></li>
-<li><a href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></li>
-</ul>
-<h2 id="相似题目">相似题目</h2>
-<ul>
-<li><a href="../binary-tree-zigzag-level-order-traversal/README.md">二叉树的锯齿形层序遍历</a></li>
-<li><a href="../binary-tree-level-order-traversal-ii/README.md">二叉树的层序遍历 II</a></li>
-<li><a href="../minimum-depth-of-binary-tree/README.md">二叉树的最小深度</a></li>
-<li><a href="../binary-tree-vertical-order-traversal/README.md">二叉树的垂直遍历</a></li>
-<li><a href="../average-of-levels-in-binary-tree/README.md">二叉树的层平均值</a></li>
-<li><a href="../n-ary-tree-level-order-traversal/README.md">N 叉树的层序遍历</a></li>
-<li><a href="../cousins-in-binary-tree/README.md">二叉树的堂兄弟节点</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>

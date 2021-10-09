@@ -1,178 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[21. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="[21. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)">
-<meta itemprop="description" content="| English | 简体中文 |
-21. Merge Two Sorted Lists Description Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
-&nbsp;
-Example 1:
-Input: l1 = [1,2,4], l2 = [1,3,4]Output: [1,1,2,3,4,4]Example 2:
-Input: l1 = [], l2 = []Output: []Example 3:
-Input: l1 = [], l2 = [0]Output: [0]&nbsp;">
-
-<meta itemprop="wordCount" content="121">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="[21. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)" />
-<meta property="og:description" content="| English | 简体中文 |
-21. Merge Two Sorted Lists Description Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
-&nbsp;
-Example 1:
-Input: l1 = [1,2,4], l2 = [1,3,4]Output: [1,1,2,3,4,4]Example 2:
-Input: l1 = [], l2 = []Output: []Example 3:
-Input: l1 = [], l2 = [0]Output: [0]&nbsp;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://xmchxup.github.io/problemset/merge-two-sorted-lists/readme_en/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[21. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)"/>
-<meta name="twitter:description" content="| English | 简体中文 |
-21. Merge Two Sorted Lists Description Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
-&nbsp;
-Example 1:
-Input: l1 = [1,2,4], l2 = [1,3,4]Output: [1,1,2,3,4,4]Example 2:
-Input: l1 = [], l2 = []Output: []Example 3:
-Input: l1 = [], l2 = [0]Output: [0]&nbsp;"/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://xmchxup.github.io/js/main.js"></script>
-</head>
-
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://xmchxup.github.io/">
-				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
-	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post">
-			<div class="post-header">
-				
-				<div class="matter">
-					<h1 class="title">[21. Merge Two Sorted Lists](https://leetcode-cn.com/problems/merge-two-sorted-lists/)</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p>| English | <a href="../readme">简体中文</a> |</p>
-<h1 id="21-merge-two-sorted-listshttpsleetcode-cncomproblemsmerge-two-sorted-lists"><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21. Merge Two Sorted Lists</a></h1>
-<h2 id="description">Description</h2>
-
-
-<p>Merge two sorted linked lists and return it as a <strong>sorted</strong> list. The list should be made by splicing together the nodes of the first two lists.</p>
-
-<p>&nbsp;</p>
-<p><strong>Example 1:</strong></p>
-<img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" style="width: 662px; height: 302px;" />
-<pre>
-<strong>Input:</strong> l1 = [1,2,4], l2 = [1,3,4]
-<strong>Output:</strong> [1,1,2,3,4,4]
-</pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre>
-<strong>Input:</strong> l1 = [], l2 = []
-<strong>Output:</strong> []
-</pre>
-
-<p><strong>Example 3:</strong></p>
-
-<pre>
-<strong>Input:</strong> l1 = [], l2 = [0]
-<strong>Output:</strong> [0]
-</pre>
-
-<p>&nbsp;</p>
-<p><strong>Constraints:</strong></p>
-
-<ul>
-	<li>The number of nodes in both lists is in the range <code>[0, 50]</code>.</li>
-	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
-	<li>Both <code>l1</code> and <code>l2</code> are sorted in <strong>non-decreasing</strong> order.</li>
-</ul>
-
-
-<h2 id="related-topics">Related Topics</h2>
-<ul>
-<li><a href="https://leetcode-cn.com/tag/recursion">Recursion</a></li>
-<li><a href="https://leetcode-cn.com/tag/linked-list">Linked List</a></li>
-</ul>
-<h2 id="similar-questions">Similar Questions</h2>
-<ul>
-<li><a href="../merge-k-sorted-lists/README_EN.md">Merge k Sorted Lists</a></li>
-<li><a href="../merge-sorted-array/README_EN.md">Merge Sorted Array</a></li>
-<li><a href="../sort-list/README_EN.md">Sort List</a></li>
-<li><a href="../shortest-word-distance-ii/README_EN.md">Shortest Word Distance II</a></li>
-</ul>
-
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'blog-evvznokjet';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the </a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-159953206-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
-</html>
