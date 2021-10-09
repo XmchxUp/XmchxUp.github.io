@@ -24,7 +24,7 @@
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://xmchxup.github.io/pages/about/</guid>
-      <description>我，一个 00 年、黑头发、戴眼镜的小伙子。未来以 Java 谋生，现先打好基础。</description>
+      <description>Day Day Up</description>
     </item>
     
     <item>
@@ -34,6 +34,26 @@
       
       <guid>https://xmchxup.github.io/pages/projects/</guid>
       <description>Web Project  VoteSystem 一个简单的 JavaWeb 投票系统 GradeSystem 一个简单的毕设评分系统  </description>
+    </item>
+    
+    <item>
+      <title>LeetCode</title>
+      <link>https://xmchxup.github.io/leetcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/leetcode/</guid>
+      <description>| English | 简体中文 |
+LeetCode 的解答最近一次更新: 2021-10-09 07:06:00   # 题名 解答 通过率 难度 标签     面试题 10.09 排序矩阵查找 Java 45.5% 中等 数组、二分查找、分治、矩阵   面试题 16.16 部分排序 Java 45.3% 中等 栈、贪心、数组、双指针、排序、单调栈   剑指 Offer 59 - II 队列的最大值 Java 47.5% 中等 设计、队列、单调队列   剑指 Offer 55 - I 二叉树的深度 Java 79.0% 简单 树、深度优先搜索、广度优先搜索、二叉树   1436 旅行终点站 Java 82.2% 简单 哈希表、字符串   1332 删除回文子序列 Go 68.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode_en</title>
+      <link>https://xmchxup.github.io/leetcode_en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/leetcode_en/</guid>
+      <description>| English | 简体中文 |
+My LeetCode SolutionsLast updated: 2021-10-09 07:06:00   # Title Solutions Acceptance Difficulty Tags     面试题 10.09 Sorted Matrix Search LCCI Java 45.5% medium Array, Binary Search, Divide and Conquer, Matrix   面试题 16.16 Sub Sort LCCI Java 45.3% medium Stack, Greedy, Array, Two Pointers, Sorting, Monotonic Stack   剑指 Offer 59 - II 队列的最大值 LCOF Java 47.5% medium Design, Queue, Monotonic Queue   剑指 Offer 55 - I 二叉树的深度 LCOF Java 79.</description>
     </item>
     
   </channel>

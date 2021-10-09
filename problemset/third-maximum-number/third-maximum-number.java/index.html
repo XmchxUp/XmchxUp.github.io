@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="// @Title: 第三大的数 (Third Maximum Number) // @Author: 1394466835@qq.com // @Date: 2021-10-06 16:48:50 // @Runtime: 4 ms // @Memory: 38.2 MB class Solution { public int thirdMax(int[] nums) { Integer max1 = null; Integer max2 = null; Integer max3 = null; for (Integer num : nums) { if (num.equals(max1) || num.equals(max2) || num.equals(max2)) continue; if (max1 == null || num &gt; max1) { max3 = max2; max2 = max1; max1 = num; } else if (max2 == null || num &gt; max2) { max3 = max2; max2 = num; } else if (max3 == null || num &gt; max3) { max3 = num; } } return max3 == null ?">
+
+<meta itemprop="wordCount" content="115">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="// @Title: 第三大的数 (Third Maximum Number) // @Author: 1394466835@qq.com // @Date: 2021-10-06 16:48:50 // @Runtime: 4 ms // @Memory: 38.2 MB class Solution { public int thirdMax(int[] nums) { Integer max1 = null; Integer max2 = null; Integer max3 = null; for (Integer num : nums) { if (num.equals(max1) || num.equals(max2) || num.equals(max2)) continue; if (max1 == null || num &gt; max1) { max3 = max2; max2 = max1; max1 = num; } else if (max2 == null || num &gt; max2) { max3 = max2; max2 = num; } else if (max3 == null || num &gt; max3) { max3 = num; } } return max3 == null ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/third-maximum-number/third-maximum-number.java/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="// @Title: 第三大的数 (Third Maximum Number) // @Author: 1394466835@qq.com // @Date: 2021-10-06 16:48:50 // @Runtime: 4 ms // @Memory: 38.2 MB class Solution { public int thirdMax(int[] nums) { Integer max1 = null; Integer max2 = null; Integer max3 = null; for (Integer num : nums) { if (num.equals(max1) || num.equals(max2) || num.equals(max2)) continue; if (max1 == null || num &gt; max1) { max3 = max2; max2 = max1; max1 = num; } else if (max2 == null || num &gt; max2) { max3 = max2; max2 = num; } else if (max3 == null || num &gt; max3) { max3 = num; } } return max3 == null ?"/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#008000">// @Title: 第三大的数 (Third Maximum Number)
+</span><span style="color:#008000">// @Author: 1394466835@qq.com
+</span><span style="color:#008000">// @Date: 2021-10-06 16:48:50
+</span><span style="color:#008000">// @Runtime: 4 ms
+</span><span style="color:#008000">// @Memory: 38.2 MB
+</span><span style="color:#008000"></span><span style="color:#00f">class</span> <span style="color:#2b91af">Solution</span> {
+    <span style="color:#00f">public</span> <span style="color:#2b91af">int</span> thirdMax(<span style="color:#2b91af">int</span>[] nums) {
+        Integer max1 = <span style="color:#00f">null</span>;
+        Integer max2 = <span style="color:#00f">null</span>;
+        Integer max3 = <span style="color:#00f">null</span>;
+
+        <span style="color:#00f">for</span> (Integer num : nums) {
+            <span style="color:#00f">if</span> (num.equals(max1) || 
+                num.equals(max2) || 
+                num.equals(max2))
+                <span style="color:#00f">continue</span>;
+    
+            <span style="color:#00f">if</span> (max1 == <span style="color:#00f">null</span> || num &gt; max1) {
+                max3 = max2;
+                max2 = max1;
+                max1 = num;
+            } <span style="color:#00f">else</span> <span style="color:#00f">if</span> (max2 == <span style="color:#00f">null</span> || num &gt; max2) {
+                max3 = max2;
+                max2 = num;
+            } <span style="color:#00f">else</span> <span style="color:#00f">if</span> (max3 == <span style="color:#00f">null</span> || num &gt; max3) {
+                max3 = num;
+            }
+        }
+
+        <span style="color:#00f">return</span> max3 == <span style="color:#00f">null</span> ? max1 : max3;
+    }
+}
+</code></pre></div>
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

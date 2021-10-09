@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[565. Array Nesting](https://leetcode-cn.com/problems/array-nesting/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="[565. Array Nesting](https://leetcode-cn.com/problems/array-nesting/)">
+<meta itemprop="description" content="| English | 简体中文 |
+565. Array Nesting Description You are given an integer array nums of length n where nums is a permutation of the numbers in the range [0, n - 1].
+You should build a set s[k] = {nums[k], nums[nums[k]], nums[nums[nums[k]]], ... } subjected to the following rule:
+The first element in s[k] starts with the selection of the element nums[k] of index = k.The next element in s[k] should be nums[nums[k]], and then nums[nums[nums[k]]], and so on.">
+
+<meta itemprop="wordCount" content="196">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="[565. Array Nesting](https://leetcode-cn.com/problems/array-nesting/)" />
+<meta property="og:description" content="| English | 简体中文 |
+565. Array Nesting Description You are given an integer array nums of length n where nums is a permutation of the numbers in the range [0, n - 1].
+You should build a set s[k] = {nums[k], nums[nums[k]], nums[nums[nums[k]]], ... } subjected to the following rule:
+The first element in s[k] starts with the selection of the element nums[k] of index = k.The next element in s[k] should be nums[nums[k]], and then nums[nums[nums[k]]], and so on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/array-nesting/readme_en/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[565. Array Nesting](https://leetcode-cn.com/problems/array-nesting/)"/>
+<meta name="twitter:description" content="| English | 简体中文 |
+565. Array Nesting Description You are given an integer array nums of length n where nums is a permutation of the numbers in the range [0, n - 1].
+You should build a set s[k] = {nums[k], nums[nums[k]], nums[nums[nums[k]]], ... } subjected to the following rule:
+The first element in s[k] starts with the selection of the element nums[k] of index = k.The next element in s[k] should be nums[nums[k]], and then nums[nums[nums[k]]], and so on."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title">[565. Array Nesting](https://leetcode-cn.com/problems/array-nesting/)</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| English | <a href="../readme">简体中文</a> |</p>
+<h1 id="565-array-nestinghttpsleetcode-cncomproblemsarray-nesting"><a href="https://leetcode-cn.com/problems/array-nesting/">565. Array Nesting</a></h1>
+<h2 id="description">Description</h2>
+
+
+<p>You are given an integer array <code>nums</code> of length <code>n</code> where <code>nums</code> is a permutation of the numbers in the range <code>[0, n - 1]</code>.</p>
+
+<p>You should build a set <code>s[k] = {nums[k], nums[nums[k]], nums[nums[nums[k]]], ... }</code> subjected to the following rule:</p>
+
+<ul>
+	<li>The first element in <code>s[k]</code> starts with the selection of the element <code>nums[k]</code> of <code>index = k</code>.</li>
+	<li>The next element in <code>s[k]</code> should be <code>nums[nums[k]]</code>, and then <code>nums[nums[nums[k]]]</code>, and so on.</li>
+	<li>We stop adding right before a duplicate element occurs in <code>s[k]</code>.</li>
+</ul>
+
+<p>Return <em>the longest length of a set</em> <code>s[k]</code>.</p>
+
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [5,4,0,3,1,6,2]
+<strong>Output:</strong> 4
+<strong>Explanation:</strong> 
+nums[0] = 5, nums[1] = 4, nums[2] = 0, nums[3] = 3, nums[4] = 1, nums[5] = 6, nums[6] = 2.
+One of the longest sets s[k]:
+s[0] = {nums[0], nums[5], nums[6], nums[2]} = {5, 6, 2, 0}
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> nums = [0,1,2]
+<strong>Output:</strong> 1
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>
+	<li><code>0 &lt;= nums[i] &lt; nums.length</code></li>
+	<li>All the values of <code>nums</code> are <strong>unique</strong>.</li>
+</ul>
+
+
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/depth-first-search">Depth-First Search</a></li>
+<li><a href="https://leetcode-cn.com/tag/array">Array</a></li>
+</ul>
+<h2 id="similar-questions">Similar Questions</h2>
+<ul>
+<li><a href="../nested-list-weight-sum/README_EN.md">Nested List Weight Sum</a></li>
+<li><a href="../flatten-nested-list-iterator/README_EN.md">Flatten Nested List Iterator</a></li>
+<li><a href="../nested-list-weight-sum-ii/README_EN.md">Nested List Weight Sum II</a></li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

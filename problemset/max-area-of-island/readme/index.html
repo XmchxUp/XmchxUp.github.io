@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="| English | 简体中文 |
+695. 岛屿的最大面积 题目描述 给你一个大小为 m x n 的二进制矩阵 grid 。
+岛屿&nbsp;是由一些相邻的&nbsp;1&nbsp;(代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在 水平或者竖直的四个方向上 相邻。你可以假设&nbsp;grid 的四个边缘都被 0（代表水）包围着。
+岛屿的面积是岛上值为 1 的单元格的数目。
+计算并返回 grid 中最大的岛屿面积。如果没有岛屿，则返回面积为 0 。
+&nbsp;
+示例 1：
+输入：grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]输出：6解释：答案不应该是 11 ，因为岛屿只能包含水平或垂直这四个方向上的 1 。示例 2：
+输入：grid = [[0,0,0,0,0,0,0,0]]输出：0&nbsp;
+提示：
+m == grid.lengthn == grid[i].length1 &lt;= m, n &lt;= 50grid[i][j] 为 0 或 1相关话题  深度优先搜索 广度优先搜索 并查集 数组 矩阵  相似题目  岛屿数量 岛屿的周长  ">
+
+<meta itemprop="wordCount" content="77">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="| English | 简体中文 |
+695. 岛屿的最大面积 题目描述 给你一个大小为 m x n 的二进制矩阵 grid 。
+岛屿&nbsp;是由一些相邻的&nbsp;1&nbsp;(代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在 水平或者竖直的四个方向上 相邻。你可以假设&nbsp;grid 的四个边缘都被 0（代表水）包围着。
+岛屿的面积是岛上值为 1 的单元格的数目。
+计算并返回 grid 中最大的岛屿面积。如果没有岛屿，则返回面积为 0 。
+&nbsp;
+示例 1：
+输入：grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]输出：6解释：答案不应该是 11 ，因为岛屿只能包含水平或垂直这四个方向上的 1 。示例 2：
+输入：grid = [[0,0,0,0,0,0,0,0]]输出：0&nbsp;
+提示：
+m == grid.lengthn == grid[i].length1 &lt;= m, n &lt;= 50grid[i][j] 为 0 或 1相关话题  深度优先搜索 广度优先搜索 并查集 数组 矩阵  相似题目  岛屿数量 岛屿的周长  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/max-area-of-island/readme/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="| English | 简体中文 |
+695. 岛屿的最大面积 题目描述 给你一个大小为 m x n 的二进制矩阵 grid 。
+岛屿&nbsp;是由一些相邻的&nbsp;1&nbsp;(代表土地) 构成的组合，这里的「相邻」要求两个 1 必须在 水平或者竖直的四个方向上 相邻。你可以假设&nbsp;grid 的四个边缘都被 0（代表水）包围着。
+岛屿的面积是岛上值为 1 的单元格的数目。
+计算并返回 grid 中最大的岛屿面积。如果没有岛屿，则返回面积为 0 。
+&nbsp;
+示例 1：
+输入：grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]输出：6解释：答案不应该是 11 ，因为岛屿只能包含水平或垂直这四个方向上的 1 。示例 2：
+输入：grid = [[0,0,0,0,0,0,0,0]]输出：0&nbsp;
+提示：
+m == grid.lengthn == grid[i].length1 &lt;= m, n &lt;= 50grid[i][j] 为 0 或 1相关话题  深度优先搜索 广度优先搜索 并查集 数组 矩阵  相似题目  岛屿数量 岛屿的周长  "/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
+<h1 id="695-岛屿的最大面积httpsleetcode-cncomproblemsmax-area-of-island"><a href="https://leetcode-cn.com/problems/max-area-of-island/">695. 岛屿的最大面积</a></h1>
+<h2 id="题目描述">题目描述</h2>
+
+
+<p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> 。</p>
+
+<p><strong>岛屿</strong>&nbsp;是由一些相邻的&nbsp;<code>1</code>&nbsp;(代表土地) 构成的组合，这里的「相邻」要求两个 <code>1</code> 必须在 <strong>水平或者竖直的四个方向上 </strong>相邻。你可以假设&nbsp;<code>grid</code> 的四个边缘都被 <code>0</code>（代表水）包围着。</p>
+
+<p>岛屿的面积是岛上值为 <code>1</code> 的单元格的数目。</p>
+
+<p>计算并返回 <code>grid</code> 中最大的岛屿面积。如果没有岛屿，则返回面积为 <code>0</code> 。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>示例 1：</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2021/05/01/maxarea1-grid.jpg" style="width: 500px; height: 310px;" />
+<pre>
+<strong>输入：</strong>grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+<strong>输出：</strong>6
+<strong>解释：</strong>答案不应该是 <code>11</code> ，因为岛屿只能包含水平或垂直这四个方向上的 <code>1</code> 。
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>grid = [[0,0,0,0,0,0,0,0]]
+<strong>输出：</strong>0
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>m == grid.length</code></li>
+	<li><code>n == grid[i].length</code></li>
+	<li><code>1 &lt;= m, n &lt;= 50</code></li>
+	<li><code>grid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
+</ul>
+
+
+<h2 id="相关话题">相关话题</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></li>
+<li><a href="https://leetcode-cn.com/tag/breadth-first-search">广度优先搜索</a></li>
+<li><a href="https://leetcode-cn.com/tag/union-find">并查集</a></li>
+<li><a href="https://leetcode-cn.com/tag/array">数组</a></li>
+<li><a href="https://leetcode-cn.com/tag/matrix">矩阵</a></li>
+</ul>
+<h2 id="相似题目">相似题目</h2>
+<ul>
+<li><a href="../number-of-islands/README.md">岛屿数量</a></li>
+<li><a href="../island-perimeter/README.md">岛屿的周长</a></li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

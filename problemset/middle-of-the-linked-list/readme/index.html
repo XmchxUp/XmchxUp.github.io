@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="| English | 简体中文 |
+876. 链表的中间结点 题目描述 给定一个头结点为 head 的非空单链表，返回链表的中间结点。
+如果有两个中间结点，则返回第二个中间结点。
+ 示例 1：
+输入：[1,2,3,4,5]输出：此列表中的结点 3 (序列化形式：[3,4,5])返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。注意，我们返回了一个 ListNode 类型的对象 ans，这样：ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.示例 2：
+输入：[1,2,3,4,5,6]输出：此列表中的结点 4 (序列化形式：[4,5,6])由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。 提示：
+给定链表的结点数介于 1 和 100 之间。相关话题  链表 双指针  相似题目 ">
+
+<meta itemprop="wordCount" content="60">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="| English | 简体中文 |
+876. 链表的中间结点 题目描述 给定一个头结点为 head 的非空单链表，返回链表的中间结点。
+如果有两个中间结点，则返回第二个中间结点。
+ 示例 1：
+输入：[1,2,3,4,5]输出：此列表中的结点 3 (序列化形式：[3,4,5])返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。注意，我们返回了一个 ListNode 类型的对象 ans，这样：ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.示例 2：
+输入：[1,2,3,4,5,6]输出：此列表中的结点 4 (序列化形式：[4,5,6])由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。 提示：
+给定链表的结点数介于 1 和 100 之间。相关话题  链表 双指针  相似题目 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/middle-of-the-linked-list/readme/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="| English | 简体中文 |
+876. 链表的中间结点 题目描述 给定一个头结点为 head 的非空单链表，返回链表的中间结点。
+如果有两个中间结点，则返回第二个中间结点。
+ 示例 1：
+输入：[1,2,3,4,5]输出：此列表中的结点 3 (序列化形式：[3,4,5])返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。注意，我们返回了一个 ListNode 类型的对象 ans，这样：ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.示例 2：
+输入：[1,2,3,4,5,6]输出：此列表中的结点 4 (序列化形式：[4,5,6])由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。 提示：
+给定链表的结点数介于 1 和 100 之间。相关话题  链表 双指针  相似题目 "/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
+<h1 id="876-链表的中间结点httpsleetcode-cncomproblemsmiddle-of-the-linked-list"><a href="https://leetcode-cn.com/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h1>
+<h2 id="题目描述">题目描述</h2>
+
+
+<p>给定一个头结点为 <code>head</code> 的非空单链表，返回链表的中间结点。</p>
+
+<p>如果有两个中间结点，则返回第二个中间结点。</p>
+
+<p> </p>
+
+<p><strong>示例 1：</strong></p>
+
+<pre>
+<strong>输入：</strong>[1,2,3,4,5]
+<strong>输出：</strong>此列表中的结点 3 (序列化形式：[3,4,5])
+返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。
+注意，我们返回了一个 ListNode 类型的对象 ans，这样：
+ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.
+</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>[1,2,3,4,5,6]
+<strong>输出：</strong>此列表中的结点 4 (序列化形式：[4,5,6])
+由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。
+</pre>
+
+<p> </p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li>给定链表的结点数介于 <code>1</code> 和 <code>100</code> 之间。</li>
+</ul>
+
+
+<h2 id="相关话题">相关话题</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/linked-list">链表</a></li>
+<li><a href="https://leetcode-cn.com/tag/two-pointers">双指针</a></li>
+</ul>
+<h2 id="相似题目">相似题目</h2>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

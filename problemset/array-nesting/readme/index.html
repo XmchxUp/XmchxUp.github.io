@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="| English | 简体中文 |
+565. 数组嵌套 题目描述 索引从0开始长度为N的数组A，包含0到N - 1的所有整数。找到最大的集合S并返回其大小，其中 S[i] = {A[i], A[A[i]], A[A[A[i]]], ... }且遵守以下的规则。
+假设选择索引为i的元素A[i]为S的第一个元素，S的下一个元素应该是A[A[i]]，之后是A[A[A[i]]]... 以此类推，不断添加直到S出现重复的元素。
+&nbsp;
+示例&nbsp;1:
+输入: A = [5,4,0,3,1,6,2]输出: 4解释: A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.其中一种最长的 S[K]:S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}&nbsp;
+提示：
+N是[1, 20,000]之间的整数。A中不含有重复的元素。A中的元素大小在[0, N-1]之间。相关话题  深度优先搜索 数组  相似题目  嵌套列表权重和 扁平化嵌套列表迭代器 加权嵌套序列和 II  ">
+
+<meta itemprop="wordCount" content="78">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="| English | 简体中文 |
+565. 数组嵌套 题目描述 索引从0开始长度为N的数组A，包含0到N - 1的所有整数。找到最大的集合S并返回其大小，其中 S[i] = {A[i], A[A[i]], A[A[A[i]]], ... }且遵守以下的规则。
+假设选择索引为i的元素A[i]为S的第一个元素，S的下一个元素应该是A[A[i]]，之后是A[A[A[i]]]... 以此类推，不断添加直到S出现重复的元素。
+&nbsp;
+示例&nbsp;1:
+输入: A = [5,4,0,3,1,6,2]输出: 4解释: A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.其中一种最长的 S[K]:S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}&nbsp;
+提示：
+N是[1, 20,000]之间的整数。A中不含有重复的元素。A中的元素大小在[0, N-1]之间。相关话题  深度优先搜索 数组  相似题目  嵌套列表权重和 扁平化嵌套列表迭代器 加权嵌套序列和 II  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/array-nesting/readme/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="| English | 简体中文 |
+565. 数组嵌套 题目描述 索引从0开始长度为N的数组A，包含0到N - 1的所有整数。找到最大的集合S并返回其大小，其中 S[i] = {A[i], A[A[i]], A[A[A[i]]], ... }且遵守以下的规则。
+假设选择索引为i的元素A[i]为S的第一个元素，S的下一个元素应该是A[A[i]]，之后是A[A[A[i]]]... 以此类推，不断添加直到S出现重复的元素。
+&nbsp;
+示例&nbsp;1:
+输入: A = [5,4,0,3,1,6,2]输出: 4解释: A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.其中一种最长的 S[K]:S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}&nbsp;
+提示：
+N是[1, 20,000]之间的整数。A中不含有重复的元素。A中的元素大小在[0, N-1]之间。相关话题  深度优先搜索 数组  相似题目  嵌套列表权重和 扁平化嵌套列表迭代器 加权嵌套序列和 II  "/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
+<h1 id="565-数组嵌套httpsleetcode-cncomproblemsarray-nesting"><a href="https://leetcode-cn.com/problems/array-nesting/">565. 数组嵌套</a></h1>
+<h2 id="题目描述">题目描述</h2>
+
+
+<p>索引从<code>0</code>开始长度为<code>N</code>的数组<code>A</code>，包含<code>0</code>到<code>N - 1</code>的所有整数。找到最大的集合<code>S</code>并返回其大小，其中 <code>S[i] = {A[i], A[A[i]], A[A[A[i]]], ... }</code>且遵守以下的规则。</p>
+
+<p>假设选择索引为<code>i</code>的元素<code>A[i]</code>为<code>S</code>的第一个元素，<code>S</code>的下一个元素应该是<code>A[A[i]]</code>，之后是<code>A[A[A[i]]]...</code> 以此类推，不断添加直到<code>S</code>出现重复的元素。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>示例&nbsp;1:</strong></p>
+
+<pre><strong>输入:</strong> A = [5,4,0,3,1,6,2]
+<strong>输出:</strong> 4
+<strong>解释:</strong> 
+A[0] = 5, A[1] = 4, A[2] = 0, A[3] = 3, A[4] = 1, A[5] = 6, A[6] = 2.
+
+其中一种最长的 S[K]:
+S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ol>
+	<li><code>N</code>是<code>[1, 20,000]</code>之间的整数。</li>
+	<li><code>A</code>中不含有重复的元素。</li>
+	<li><code>A</code>中的元素大小在<code>[0, N-1]</code>之间。</li>
+</ol>
+
+
+<h2 id="相关话题">相关话题</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></li>
+<li><a href="https://leetcode-cn.com/tag/array">数组</a></li>
+</ul>
+<h2 id="相似题目">相似题目</h2>
+<ul>
+<li><a href="../nested-list-weight-sum/README.md">嵌套列表权重和</a></li>
+<li><a href="../flatten-nested-list-iterator/README.md">扁平化嵌套列表迭代器</a></li>
+<li><a href="../nested-list-weight-sum-ii/README.md">加权嵌套序列和 II</a></li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

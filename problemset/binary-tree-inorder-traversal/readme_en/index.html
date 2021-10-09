@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[94. Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="[94. Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)">
+<meta itemprop="description" content="| English | 简体中文 |
+94. Binary Tree Inorder Traversal Description Given the root of a binary tree, return the inorder traversal of its nodes&#39; values.
+&nbsp;
+Example 1:
+Input: root = [1,null,2,3]Output: [1,3,2]Example 2:
+Input: root = []Output: []Example 3:
+Input: root = [1]Output: [1]Example 4:
+Input: root = [1,2]Output: [2,1]Example 5:
+Input: root = [1,null,2]Output: [1,2]&nbsp;">
+
+<meta itemprop="wordCount" content="155">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="[94. Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)" />
+<meta property="og:description" content="| English | 简体中文 |
+94. Binary Tree Inorder Traversal Description Given the root of a binary tree, return the inorder traversal of its nodes&#39; values.
+&nbsp;
+Example 1:
+Input: root = [1,null,2,3]Output: [1,3,2]Example 2:
+Input: root = []Output: []Example 3:
+Input: root = [1]Output: [1]Example 4:
+Input: root = [1,2]Output: [2,1]Example 5:
+Input: root = [1,null,2]Output: [1,2]&nbsp;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/binary-tree-inorder-traversal/readme_en/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[94. Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)"/>
+<meta name="twitter:description" content="| English | 简体中文 |
+94. Binary Tree Inorder Traversal Description Given the root of a binary tree, return the inorder traversal of its nodes&#39; values.
+&nbsp;
+Example 1:
+Input: root = [1,null,2,3]Output: [1,3,2]Example 2:
+Input: root = []Output: []Example 3:
+Input: root = [1]Output: [1]Example 4:
+Input: root = [1,2]Output: [2,1]Example 5:
+Input: root = [1,null,2]Output: [1,2]&nbsp;"/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title">[94. Binary Tree Inorder Traversal](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| English | <a href="../readme">简体中文</a> |</p>
+<h1 id="94-binary-tree-inorder-traversalhttpsleetcode-cncomproblemsbinary-tree-inorder-traversal"><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/">94. Binary Tree Inorder Traversal</a></h1>
+<h2 id="description">Description</h2>
+
+
+<p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&#39; values</em>.</p>
+
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" style="width: 202px; height: 324px;" />
+<pre>
+<strong>Input:</strong> root = [1,null,2,3]
+<strong>Output:</strong> [1,3,2]
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> root = []
+<strong>Output:</strong> []
+</pre>
+
+<p><strong>Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> root = [1]
+<strong>Output:</strong> [1]
+</pre>
+
+<p><strong>Example 4:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_5.jpg" style="width: 202px; height: 202px;" />
+<pre>
+<strong>Input:</strong> root = [1,2]
+<strong>Output:</strong> [2,1]
+</pre>
+
+<p><strong>Example 5:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2020/09/15/inorder_4.jpg" style="width: 202px; height: 202px;" />
+<pre>
+<strong>Input:</strong> root = [1,null,2]
+<strong>Output:</strong> [1,2]
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>
+	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
+</ul>
+
+<p>&nbsp;</p>
+<strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?
+
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/stack">Stack</a></li>
+<li><a href="https://leetcode-cn.com/tag/tree">Tree</a></li>
+<li><a href="https://leetcode-cn.com/tag/depth-first-search">Depth-First Search</a></li>
+<li><a href="https://leetcode-cn.com/tag/binary-tree">Binary Tree</a></li>
+</ul>
+<h2 id="similar-questions">Similar Questions</h2>
+<ul>
+<li><a href="../validate-binary-search-tree/README_EN.md">Validate Binary Search Tree</a></li>
+<li><a href="../binary-tree-preorder-traversal/README_EN.md">Binary Tree Preorder Traversal</a></li>
+<li><a href="../binary-tree-postorder-traversal/README_EN.md">Binary Tree Postorder Traversal</a></li>
+<li><a href="../binary-search-tree-iterator/README_EN.md">Binary Search Tree Iterator</a></li>
+<li><a href="../kth-smallest-element-in-a-bst/README_EN.md">Kth Smallest Element in a BST</a></li>
+<li><a href="../closest-binary-search-tree-value-ii/README_EN.md">Closest Binary Search Tree Value II</a></li>
+<li><a href="../inorder-successor-in-bst/README_EN.md">Inorder Successor in BST</a></li>
+<li><a href="../convert-binary-search-tree-to-sorted-doubly-linked-list/README_EN.md">Convert Binary Search Tree to Sorted Doubly Linked List</a></li>
+<li><a href="../minimum-distance-between-bst-nodes/README_EN.md">Minimum Distance Between BST Nodes</a></li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

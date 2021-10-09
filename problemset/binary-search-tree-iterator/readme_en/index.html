@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[173. Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="[173. Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)">
+<meta itemprop="description" content="| English | 简体中文 |
+173. Binary Search Tree Iterator Description Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
+BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false.">
+
+<meta itemprop="wordCount" content="328">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="[173. Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)" />
+<meta property="og:description" content="| English | 简体中文 |
+173. Binary Search Tree Iterator Description Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
+BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/binary-search-tree-iterator/readme_en/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[173. Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)"/>
+<meta name="twitter:description" content="| English | 简体中文 |
+173. Binary Search Tree Iterator Description Implement the BSTIterator class that represents an iterator over the in-order traversal of a binary search tree (BST):
+BSTIterator(TreeNode root) Initializes an object of the BSTIterator class. The root of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.boolean hasNext() Returns true if there exists a number in the traversal to the right of the pointer, otherwise returns false."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title">[173. Binary Search Tree Iterator](https://leetcode-cn.com/problems/binary-search-tree-iterator/)</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| English | <a href="../readme">简体中文</a> |</p>
+<h1 id="173-binary-search-tree-iteratorhttpsleetcode-cncomproblemsbinary-search-tree-iterator"><a href="https://leetcode-cn.com/problems/binary-search-tree-iterator/">173. Binary Search Tree Iterator</a></h1>
+<h2 id="description">Description</h2>
+
+
+<p>Implement the <code>BSTIterator</code> class that represents an iterator over the <strong><a href="https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR)" target="_blank">in-order traversal</a></strong> of a binary search tree (BST):</p>
+
+<ul>
+	<li><code>BSTIterator(TreeNode root)</code> Initializes an object of the <code>BSTIterator</code> class. The <code>root</code> of the BST is given as part of the constructor. The pointer should be initialized to a non-existent number smaller than any element in the BST.</li>
+	<li><code>boolean hasNext()</code> Returns <code>true</code> if there exists a number in the traversal to the right of the pointer, otherwise returns <code>false</code>.</li>
+	<li><code>int next()</code> Moves the pointer to the right, then returns the number at the pointer.</li>
+</ul>
+
+<p>Notice that by initializing the pointer to a non-existent smallest number, the first call to <code>next()</code> will return the smallest element in the BST.</p>
+
+<p>You may assume that <code>next()</code> calls will always be valid. That is, there will be at least a next number in the in-order traversal when <code>next()</code> is called.</p>
+
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+<img alt="" src="https://assets.leetcode.com/uploads/2018/12/25/bst-tree.png" style="width: 189px; height: 178px;" />
+<pre>
+<strong>Input</strong>
+[&quot;BSTIterator&quot;, &quot;next&quot;, &quot;next&quot;, &quot;hasNext&quot;, &quot;next&quot;, &quot;hasNext&quot;, &quot;next&quot;, &quot;hasNext&quot;, &quot;next&quot;, &quot;hasNext&quot;]
+[[[7, 3, 15, null, null, 9, 20]], [], [], [], [], [], [], [], [], []]
+<strong>Output</strong>
+[null, 3, 7, true, 9, true, 15, true, 20, false]
+
+<strong>Explanation</strong>
+BSTIterator bSTIterator = new BSTIterator([7, 3, 15, null, null, 9, 20]);
+bSTIterator.next();    // return 3
+bSTIterator.next();    // return 7
+bSTIterator.hasNext(); // return True
+bSTIterator.next();    // return 9
+bSTIterator.hasNext(); // return True
+bSTIterator.next();    // return 15
+bSTIterator.hasNext(); // return True
+bSTIterator.next();    // return 20
+bSTIterator.hasNext(); // return False
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li>The number of nodes in the tree is in the range <code>[1, 10<sup>5</sup>]</code>.</li>
+	<li><code>0 &lt;= Node.val &lt;= 10<sup>6</sup></code></li>
+	<li>At most <code>10<sup>5</sup></code> calls will be made to <code>hasNext</code>, and <code>next</code>.</li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong></p>
+
+<ul>
+	<li>Could you implement <code>next()</code> and <code>hasNext()</code> to run in average <code>O(1)</code> time and use&nbsp;<code>O(h)</code> memory, where <code>h</code> is the height of the tree?</li>
+</ul>
+
+
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/stack">Stack</a></li>
+<li><a href="https://leetcode-cn.com/tag/tree">Tree</a></li>
+<li><a href="https://leetcode-cn.com/tag/design">Design</a></li>
+<li><a href="https://leetcode-cn.com/tag/binary-search-tree">Binary Search Tree</a></li>
+<li><a href="https://leetcode-cn.com/tag/binary-tree">Binary Tree</a></li>
+<li><a href="https://leetcode-cn.com/tag/iterator">Iterator</a></li>
+</ul>
+<h2 id="similar-questions">Similar Questions</h2>
+<ul>
+<li><a href="../binary-tree-inorder-traversal/README_EN.md">Binary Tree Inorder Traversal</a></li>
+<li><a href="../flatten-2d-vector/README_EN.md">Flatten 2D Vector</a></li>
+<li><a href="../zigzag-iterator/README_EN.md">Zigzag Iterator</a></li>
+<li><a href="../peeking-iterator/README_EN.md">Peeking Iterator</a></li>
+<li><a href="../inorder-successor-in-bst/README_EN.md">Inorder Successor in BST</a></li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

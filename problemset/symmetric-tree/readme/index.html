@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="| English | 简体中文 |
+101. 对称二叉树 题目描述 给定一个二叉树，检查它是否是镜像对称的。
+&nbsp;
+例如，二叉树&nbsp;[1,2,2,3,4,4,3] 是对称的。
+ 1/ \2 2/ \ / \3 4 4 3&nbsp;
+但是下面这个&nbsp;[1,2,2,null,3,null,3] 则不是镜像对称的:
+ 1/ \2 2\ \3 3&nbsp;
+进阶：
+你可以运用递归和迭代两种方法解决这个问题吗？
+相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目 ">
+
+<meta itemprop="wordCount" content="46">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="| English | 简体中文 |
+101. 对称二叉树 题目描述 给定一个二叉树，检查它是否是镜像对称的。
+&nbsp;
+例如，二叉树&nbsp;[1,2,2,3,4,4,3] 是对称的。
+ 1/ \2 2/ \ / \3 4 4 3&nbsp;
+但是下面这个&nbsp;[1,2,2,null,3,null,3] 则不是镜像对称的:
+ 1/ \2 2\ \3 3&nbsp;
+进阶：
+你可以运用递归和迭代两种方法解决这个问题吗？
+相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/symmetric-tree/readme/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="| English | 简体中文 |
+101. 对称二叉树 题目描述 给定一个二叉树，检查它是否是镜像对称的。
+&nbsp;
+例如，二叉树&nbsp;[1,2,2,3,4,4,3] 是对称的。
+ 1/ \2 2/ \ / \3 4 4 3&nbsp;
+但是下面这个&nbsp;[1,2,2,null,3,null,3] 则不是镜像对称的:
+ 1/ \2 2\ \3 3&nbsp;
+进阶：
+你可以运用递归和迭代两种方法解决这个问题吗？
+相关话题  树 深度优先搜索 广度优先搜索 二叉树  相似题目 "/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| <a href="../readme_en">English</a> | 简体中文 |</p>
+<h1 id="101-对称二叉树httpsleetcode-cncomproblemssymmetric-tree"><a href="https://leetcode-cn.com/problems/symmetric-tree/">101. 对称二叉树</a></h1>
+<h2 id="题目描述">题目描述</h2>
+
+
+<p>给定一个二叉树，检查它是否是镜像对称的。</p>
+
+<p>&nbsp;</p>
+
+<p>例如，二叉树&nbsp;<code>[1,2,2,3,4,4,3]</code> 是对称的。</p>
+
+<pre>    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+</pre>
+
+<p>&nbsp;</p>
+
+<p>但是下面这个&nbsp;<code>[1,2,2,null,3,null,3]</code> 则不是镜像对称的:</p>
+
+<pre>    1
+   / \
+  2   2
+   \   \
+   3    3
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>进阶：</strong></p>
+
+<p>你可以运用递归和迭代两种方法解决这个问题吗？</p>
+
+
+<h2 id="相关话题">相关话题</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/tree">树</a></li>
+<li><a href="https://leetcode-cn.com/tag/depth-first-search">深度优先搜索</a></li>
+<li><a href="https://leetcode-cn.com/tag/breadth-first-search">广度优先搜索</a></li>
+<li><a href="https://leetcode-cn.com/tag/binary-tree">二叉树</a></li>
+</ul>
+<h2 id="相似题目">相似题目</h2>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

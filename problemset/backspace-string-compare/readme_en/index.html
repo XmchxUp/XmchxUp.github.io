@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[844. Backspace String Compare](https://leetcode-cn.com/problems/backspace-string-compare/) - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="[844. Backspace String Compare](https://leetcode-cn.com/problems/backspace-string-compare/)">
+<meta itemprop="description" content="| English | 简体中文 |
+844. Backspace String Compare Description Given two strings s and t, return true if they are equal when both are typed into empty text editors. &#39;#&#39; means a backspace character.
+Note that after backspacing an empty text, the text will continue empty.
+&nbsp;
+Example 1:
+Input: s = &quot;ab#c&quot;, t = &quot;ad#c&quot;Output: trueExplanation: Both s and t become &quot;ac&quot;.Example 2:">
+
+<meta itemprop="wordCount" content="159">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="[844. Backspace String Compare](https://leetcode-cn.com/problems/backspace-string-compare/)" />
+<meta property="og:description" content="| English | 简体中文 |
+844. Backspace String Compare Description Given two strings s and t, return true if they are equal when both are typed into empty text editors. &#39;#&#39; means a backspace character.
+Note that after backspacing an empty text, the text will continue empty.
+&nbsp;
+Example 1:
+Input: s = &quot;ab#c&quot;, t = &quot;ad#c&quot;Output: trueExplanation: Both s and t become &quot;ac&quot;.Example 2:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/backspace-string-compare/readme_en/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[844. Backspace String Compare](https://leetcode-cn.com/problems/backspace-string-compare/)"/>
+<meta name="twitter:description" content="| English | 简体中文 |
+844. Backspace String Compare Description Given two strings s and t, return true if they are equal when both are typed into empty text editors. &#39;#&#39; means a backspace character.
+Note that after backspacing an empty text, the text will continue empty.
+&nbsp;
+Example 1:
+Input: s = &quot;ab#c&quot;, t = &quot;ad#c&quot;Output: trueExplanation: Both s and t become &quot;ac&quot;.Example 2:"/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title">[844. Backspace String Compare](https://leetcode-cn.com/problems/backspace-string-compare/)</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>| English | <a href="../readme">简体中文</a> |</p>
+<h1 id="844-backspace-string-comparehttpsleetcode-cncomproblemsbackspace-string-compare"><a href="https://leetcode-cn.com/problems/backspace-string-compare/">844. Backspace String Compare</a></h1>
+<h2 id="description">Description</h2>
+
+
+<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if they are equal when both are typed into empty text editors</em>. <code>&#39;#&#39;</code> means a backspace character.</p>
+
+<p>Note that after backspacing an empty text, the text will continue empty.</p>
+
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;ab#c&quot;, t = &quot;ad#c&quot;
+<strong>Output:</strong> true
+<strong>Explanation:</strong> Both s and t become &quot;ac&quot;.
+</pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;ab##&quot;, t = &quot;c#d#&quot;
+<strong>Output:</strong> true
+<strong>Explanation:</strong> Both s and t become &quot;&quot;.
+</pre>
+
+<p><strong>Example 3:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;a##c&quot;, t = &quot;#a#c&quot;
+<strong>Output:</strong> true
+<strong>Explanation:</strong> Both s and t become &quot;c&quot;.
+</pre>
+
+<p><strong>Example 4:</strong></p>
+
+<pre>
+<strong>Input:</strong> s = &quot;a#c&quot;, t = &quot;b&quot;
+<strong>Output:</strong> false
+<strong>Explanation:</strong> s becomes &quot;c&quot; while t becomes &quot;b&quot;.
+</pre>
+
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code><span>1 &lt;= s.length, t.length &lt;= 200</span></code></li>
+	<li><span><code>s</code>&nbsp;and <code>t</code> only contain&nbsp;lowercase letters and <code>&#39;#&#39;</code> characters.</span></li>
+</ul>
+
+<p>&nbsp;</p>
+<p><strong>Follow up:</strong> Can you solve it in <code>O(n)</code> time and <code>O(1)</code> space?</p>
+
+
+<h2 id="related-topics">Related Topics</h2>
+<ul>
+<li><a href="https://leetcode-cn.com/tag/stack">Stack</a></li>
+<li><a href="https://leetcode-cn.com/tag/two-pointers">Two Pointers</a></li>
+<li><a href="https://leetcode-cn.com/tag/string">String</a></li>
+<li><a href="https://leetcode-cn.com/tag/simulation">Simulation</a></li>
+</ul>
+<h2 id="similar-questions">Similar Questions</h2>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>

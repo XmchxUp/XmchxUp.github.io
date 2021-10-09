@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title> - Kevin Sun</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="">
+<meta itemprop="description" content="// @Title: 根据身高重建队列 (Queue Reconstruction by Height) // @Author: 1394466835@qq.com // @Date: 2019-04-01 17:39:23 // @Runtime: 60 ms // @Memory: 9.9 MB class Solution { public: vector&lt;pair&lt;int, int&gt;&gt; reconstructQueue(vector&lt;pair&lt;int, int&gt;&gt;&amp; people) { /*根据身高降序排序 如何相同在 按k升序排序*/ auto rul = [](const pair&lt;int,int&gt;&amp; p1, const pair&lt;int,int&gt;&amp; p2) { return p1.first == p2.first ? p1.second &lt; p2.second : p1.first &gt; p2.first;}; sort(people.begin(), people.end(), rul); //身高矮的直接插入k的位置  vector&lt;pair&lt;int, int&gt;&gt; res; for(auto&amp; p: people) { res.insert(res.begin() &#43; p.">
+
+<meta itemprop="wordCount" content="77">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="// @Title: 根据身高重建队列 (Queue Reconstruction by Height) // @Author: 1394466835@qq.com // @Date: 2019-04-01 17:39:23 // @Runtime: 60 ms // @Memory: 9.9 MB class Solution { public: vector&lt;pair&lt;int, int&gt;&gt; reconstructQueue(vector&lt;pair&lt;int, int&gt;&gt;&amp; people) { /*根据身高降序排序 如何相同在 按k升序排序*/ auto rul = [](const pair&lt;int,int&gt;&amp; p1, const pair&lt;int,int&gt;&amp; p2) { return p1.first == p2.first ? p1.second &lt; p2.second : p1.first &gt; p2.first;}; sort(people.begin(), people.end(), rul); //身高矮的直接插入k的位置  vector&lt;pair&lt;int, int&gt;&gt; res; for(auto&amp; p: people) { res.insert(res.begin() &#43; p." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xmchxup.github.io/problemset/queue-reconstruction-by-height/queue-reconstruction-by-height.cpp/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="// @Title: 根据身高重建队列 (Queue Reconstruction by Height) // @Author: 1394466835@qq.com // @Date: 2019-04-01 17:39:23 // @Runtime: 60 ms // @Memory: 9.9 MB class Solution { public: vector&lt;pair&lt;int, int&gt;&gt; reconstructQueue(vector&lt;pair&lt;int, int&gt;&gt;&amp; people) { /*根据身高降序排序 如何相同在 按k升序排序*/ auto rul = [](const pair&lt;int,int&gt;&amp; p1, const pair&lt;int,int&gt;&amp; p2) { return p1.first == p2.first ? p1.second &lt; p2.second : p1.first &gt; p2.first;}; sort(people.begin(), people.end(), rul); //身高矮的直接插入k的位置  vector&lt;pair&lt;int, int&gt;&gt; res; for(auto&amp; p: people) { res.insert(res.begin() &#43; p."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://xmchxup.github.io/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://xmchxup.github.io/">
+				<img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20210513/avatar.tcj91b8yeio.jpg" alt="Kevin Sun" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://xmchxup.github.io/">Kevin Sun</a></h1>
+	<div class="site-description"><p>You can learn anything</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/XmchxUp" title="Github"><i data-feather="github"></i></a></li><li><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+				<div class="matter">
+					<h1 class="title"></h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#008000">// @Title: 根据身高重建队列 (Queue Reconstruction by Height)
+</span><span style="color:#008000">// @Author: 1394466835@qq.com
+</span><span style="color:#008000">// @Date: 2019-04-01 17:39:23
+</span><span style="color:#008000">// @Runtime: 60 ms
+</span><span style="color:#008000">// @Memory: 9.9 MB
+</span><span style="color:#008000"></span><span style="color:#00f">class</span> <span style="color:#2b91af">Solution</span> {
+<span style="color:#00f">public</span>:
+    vector&lt;pair&lt;<span style="color:#2b91af">int</span>, <span style="color:#2b91af">int</span>&gt;&gt; reconstructQueue(vector&lt;pair&lt;<span style="color:#2b91af">int</span>, <span style="color:#2b91af">int</span>&gt;&gt;&amp; people) {
+        <span style="color:#008000">/*根据身高降序排序 如何相同在 按k升序排序*/</span>
+        <span style="color:#00f">auto</span> rul = [](<span style="color:#00f">const</span> pair&lt;<span style="color:#2b91af">int</span>,<span style="color:#2b91af">int</span>&gt;&amp; p1, <span style="color:#00f">const</span> pair&lt;<span style="color:#2b91af">int</span>,<span style="color:#2b91af">int</span>&gt;&amp; p2)
+                     { <span style="color:#00f">return</span> p1.first == p2.first ? p1.second &lt; p2.second : p1.first &gt; p2.first;};
+        sort(people.begin(), people.end(), rul);
+        
+        <span style="color:#008000">//身高矮的直接插入k的位置
+</span><span style="color:#008000"></span>        vector&lt;pair&lt;<span style="color:#2b91af">int</span>, <span style="color:#2b91af">int</span>&gt;&gt; res;
+        <span style="color:#00f">for</span>(<span style="color:#00f">auto</span>&amp; p: people)
+        {
+            res.insert(res.begin() + p.second, p);
+        }
+        <span style="color:#00f">return</span> res;
+    }
+};
+</code></pre></div>
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'blog-evvznokjet';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the </a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159953206-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>
