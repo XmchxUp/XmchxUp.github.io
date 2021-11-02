@@ -17,6 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://xmchxup.github.io/css/fastsearch.css" />
 
         <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://xmchxup.github.io/css/dark.css" />
 
@@ -68,6 +69,17 @@
 		<div>2021  © Kevin Sun |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
 	</nav>
 </div>
+
+<a id="search-btn" style="display: inline-block;" href="javascript:void(0);">
+	<i class="fas fa-search">🔍</i>
+</a>
+<div id="fastSearch">
+	<input id="searchInput" tabindex="0" type="text" placeholder="Type to Search...">
+	<ul id="searchResults">
+	</ul>
+</div>
+<script src="/js/fuse.min.js"></script> 
+<script src="/js/fastsearch.js"></script>
 
 
 <script type="application/javascript">
