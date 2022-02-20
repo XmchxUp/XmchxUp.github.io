@@ -86,7 +86,7 @@ params:
     - name: email
       url: mailto:sunhuayangak47@gmail.com
     - name: RSS
-      url: "https://github.com/XmchxUp/index.xml"
+      url: "https://xmchxup.github.io/index.xml"
 
   label:
       text: "王林 | Home"
