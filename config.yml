@@ -1,0 +1,146 @@
+baseURL: "https://xmchxup.github.io/"
+title: 王林修炼记
+paginate: 5
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+googleAnalytics: UA-159953206-1
+disqusShortname: "blog-evvznokjet"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  # title: ExampleSite
+  description: "ExampleSite description"
+  # keywords: [Blog, Portfolio, PaperMod]
+  author: 王林
+  # author: ["Me", "You"] # multiple authors
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  # disableThemeToggle: false
+
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  comments: true
+  hidemeta: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: icons/favicon.ico
+    favicon16x16: icons/favicon-16x16.png
+    favicon32x32: icons/favicon-32x32.png
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: 王林
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi，道友 \U0001F44B"
+    Content: |
+      - 欢迎来到王林修炼日记😍
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/FantasyOverflow"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/11415062/huayang"
+    - name: github
+      url: "https://github.com/XmchxUp"
+    - name: email
+      url: mailto:sunhuayangak47@gmail.com
+    - name: RSS
+      url: "https://github.com/XmchxUp/index.xml"
+
+  label:
+      text: "王林 | Home"
+      # icon: icon.png
+      iconHeight: 35
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+    linkFullImages: true
+
+  editPost:
+    URL: "https://github.com/XmchxUp/XmchxUp.github.io/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 50
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 60
+
+taxonomies:
+  category: categories
+  tag: tags
