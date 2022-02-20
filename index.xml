@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>王林修炼记</title>
-    <link>https://xmchxup.github.io/</link>
+    <link>https://xmchxup.github.io/index.xml</link>
     <description>Recent content on 王林修炼记</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
