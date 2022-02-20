@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Kevin Sun</title>
+    <title>王林修炼记</title>
     <link>https://xmchxup.github.io/</link>
-    <description>Recent content in Home on Kevin Sun</description>
+    <description>Recent content on 王林修炼记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>© Kevin Sun</copyright>
-    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ARTS计划</title>
-      <link>https://xmchxup.github.io/pages/arts/</link>
-      <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
+      <title>Copy Test</title>
+      <link>https://xmchxup.github.io/posts/ml-engineer-vs-data-scientists-who-should-you-choose/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xmchxup.github.io/pages/arts/</guid>
-      <description>周计划
-  Algorithm 每周一道 leetcode 算法题 Review 阅读并点评一篇英文技术文章 Tip 学习一个技术技巧 Share 分享一篇有观点和思考的技术文章  📝 尝试着进行ARTS打卡计划&amp;hellip;</description>
+      <guid>https://xmchxup.github.io/posts/ml-engineer-vs-data-scientists-who-should-you-choose/</guid>
+      <description>Not sure if a specific business need of your company requires a Data Scientist or an ML Engineer? Then read ahead to find out more about it.</description>
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://xmchxup.github.io/pages/about/</link>
-      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      <title>Copy Test</title>
+      <link>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xmchxup.github.io/pages/about/</guid>
-      <description>Day Day Up</description>
+      <guid>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</guid>
+      <description>Not sure if a specific business need of your company requires a Data Scientist or an ML Engineer? Then read ahead to find out more about it.</description>
     </item>
     
     <item>
-      <title>Build things for fun, for all</title>
-      <link>https://xmchxup.github.io/pages/toy-projects/</link>
-      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      <title>Markdown Syntax Guide</title>
+      <link>https://xmchxup.github.io/posts/test/test1/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://xmchxup.github.io/pages/toy-projects/</guid>
+      <guid>https://xmchxup.github.io/posts/test/test1/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://xmchxup.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/about/</guid>
+      <description>about</description>
+    </item>
+    
+    <item>
+      <title>Archive</title>
+      <link>https://xmchxup.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/archives/</guid>
+      <description>archives</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://xmchxup.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xmchxup.github.io/projects/</guid>
       <description>Web Project  VoteSystem 一个简单的 JavaWeb 投票系统 GradeSystem 一个简单的毕设评分系统  </description>
     </item>
     
     <item>
-      <title>LeetCode</title>
-      <link>https://xmchxup.github.io/leetcode/</link>
+      <title>Search</title>
+      <link>https://xmchxup.github.io/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xmchxup.github.io/leetcode/</guid>
-      <description>| English | 简体中文 |
-LeetCode 的解答最近一次更新: 2021-10-09 07:06:00   # 题名 解答 通过率 难度 标签     面试题 10.09 排序矩阵查找 Java 45.5% 中等 数组、二分查找、分治、矩阵   面试题 16.16 部分排序 Java 45.3% 中等 栈、贪心、数组、双指针、排序、单调栈   剑指 Offer 59 - II 队列的最大值 Java 47.5% 中等 设计、队列、单调队列   剑指 Offer 55 - I 二叉树的深度 Java 79.0% 简单 树、深度优先搜索、广度优先搜索、二叉树   1436 旅行终点站 Java 82.2% 简单 哈希表、字符串   1332 删除回文子序列 Go 68.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode_en</title>
-      <link>https://xmchxup.github.io/leetcode_en/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xmchxup.github.io/leetcode_en/</guid>
-      <description>| English | 简体中文 |
-My LeetCode SolutionsLast updated: 2021-10-09 07:06:00   # Title Solutions Acceptance Difficulty Tags     面试题 10.09 Sorted Matrix Search LCCI Java 45.5% medium Array, Binary Search, Divide and Conquer, Matrix   面试题 16.16 Sub Sort LCCI Java 45.3% medium Stack, Greedy, Array, Two Pointers, Sorting, Monotonic Stack   剑指 Offer 59 - II 队列的最大值 LCOF Java 47.5% medium Design, Queue, Monotonic Queue   剑指 Offer 55 - I 二叉树的深度 LCOF Java 79.</description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://xmchxup.github.io/posts/articles/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xmchxup.github.io/posts/articles/test/</guid>
-      <description>test</description>
+      <guid>https://xmchxup.github.io/search/</guid>
+      <description>search</description>
     </item>
     
   </channel>
