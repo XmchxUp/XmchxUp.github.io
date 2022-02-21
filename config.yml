@@ -11,7 +11,7 @@ buildExpired: false
 enableEmoji: true
 
 googleAnalytics: UA-159953206-1
-disqusShortname: "blog-evvznokjet"
+# disqusShortname: "blog-evvznokjet"
 
 outputs:
   home:
@@ -45,6 +45,14 @@ params:
   hidemeta: false
   showtoc: false
   tocopen: false
+
+  utteranc:
+    enable: true
+    repo: "XmchxUp/blog-comment"
+    issueTerm: "pathname"
+    label: "blog"
+    theme: "preferred-color-scheme"
+#     theme = "github-light"
 
   assets:
     # disableHLJS: true # to disable highlight.js
