@@ -5,20 +5,20 @@
     <link>https://xmchxup.github.io/</link>
     <description>Recent content on 王林修炼记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xmchxup.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Copy Test</title>
-      <link>https://xmchxup.github.io/posts/ml-engineer-vs-data-scientists-who-should-you-choose/</link>
-      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <title>WSL2 配置Xlaunch图形化界面</title>
+      <link>https://xmchxup.github.io/posts/wsl/xlaunch/</link>
+      <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://xmchxup.github.io/posts/ml-engineer-vs-data-scientists-who-should-you-choose/</guid>
-      <description>Not sure if a specific business need of your company requires a Data Scientist or an ML Engineer? Then read ahead to find out more about it.</description>
+      <guid>https://xmchxup.github.io/posts/wsl/xlaunch/</guid>
+      <description>学习操作系统真象还原时，配置WSL图形化界面。</description>
     </item>
     
     <item>
       <title>Copy Test</title>
       <link>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</link>
-      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</guid>
       <description>Not sure if a specific business need of your company requires a Data Scientist or an ML Engineer? Then read ahead to find out more about it.</description>
