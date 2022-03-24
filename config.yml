@@ -136,9 +136,9 @@ menu:
       name: Archives
       url: /archives/
       weight: 30
-    - identifier: projects
-      name: Projects
-      url: /projects/
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects/
       weight: 40
     - identifier: about
       name: About
