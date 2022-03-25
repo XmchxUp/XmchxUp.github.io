@@ -3,48 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xmchxup.github.io/categories/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
+    <loc>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</loc>
+    <lastmod>2020-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://xmchxup.github.io/posts/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/wls/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/categories/wsl/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/posts/wsl/xlaunch/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://xmchxup.github.io/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2022-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</loc>
     <lastmod>2020-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xmchxup.github.io/categories/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -69,6 +44,11 @@
   
   <url>
     <loc>https://xmchxup.github.io/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xmchxup.github.io/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   
