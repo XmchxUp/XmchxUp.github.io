@@ -3,63 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xmchxup.github.io/posts/test/ml-engineer-vs-data-scientists-who-should-you-choose/</loc>
-    <lastmod>2020-01-28T00:00:00+00:00</lastmod>
+    <loc>https://xmchxup.github.io/posts/test/math-typesetting/</loc>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://xmchxup.github.io/posts/</loc>
-    <lastmod>2020-01-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://xmchxup.github.io/</loc>
-    <lastmod>2020-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/posts/test/test1/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xmchxup.github.io/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -71,11 +26,15 @@
   </url>
   
   <url>
-    <loc>https://xmchxup.github.io/projects/</loc>
+    <loc>https://xmchxup.github.io/categories/</loc>
   </url>
   
   <url>
     <loc>https://xmchxup.github.io/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://xmchxup.github.io/tags/</loc>
   </url>
   
 </urlset>
