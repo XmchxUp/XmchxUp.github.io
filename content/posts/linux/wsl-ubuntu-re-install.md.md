@@ -51,5 +51,5 @@ git config --global user.email  "1394466835@qq.com"
 ### Docker
 > [Link](https://cs-learning-every-day.github.io/docs/cs/tools/wsl/#wsl%E5%AE%89%E8%A3%85dcoerk)
 
-#### Vim
+### Vim
 > [Link](https://github.com/archibate/vimrc)
