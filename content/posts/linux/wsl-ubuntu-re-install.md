@@ -37,7 +37,8 @@ export ALL_PROXY="http://$host_ip:7980"
 ### Python
 设置默认使用python3
 ```bash
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 ```
 ### Git
 > [Link](https://cs-learning-every-day.github.io/docs/cs/tools/git/#%e5%a4%9a%e5%8f%b0%e7%94%b5%e8%84%91%e4%bd%bf%e7%94%a8%e4%b8%80%e4%b8%aassh-key)
