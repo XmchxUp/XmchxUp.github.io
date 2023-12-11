@@ -7,7 +7,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - master
+      - main
   workflow_dispatch:
     # manual run
     inputs:
