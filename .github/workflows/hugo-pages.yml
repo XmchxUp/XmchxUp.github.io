@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Deploy Hugo PaperMod Demo to Pages
 
 on:
   push:
@@ -7,9 +7,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - main
-  #schedule:
-  #- cron: '24 */24 * * *'  # Once a day
+      - master
   workflow_dispatch:
     # manual run
     inputs:
@@ -39,7 +37,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.83.0"
+      HUGO_VERSION: "0.97.1"
     steps:
       - name: Check version
         if: ${{ github.event.inputs.hugoVersion }}
@@ -51,10 +49,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: exampleSite
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
       - name: Get Theme
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
@@ -62,10 +60,10 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
-            --gc --verbose \
+            --buildDrafts --gc --verbose \
             --baseURL ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
   # Deployment job
@@ -78,4 +76,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
