@@ -7,7 +7,7 @@ draft: false
 searchHidden: true
 ---
 
-<p>
+<!-- <p>
    Over the course of my career, I've contributed to open-source projects
    like Go, Python, LLVM, Clang, Chromium, XLA and many smaller ones. This page
    is not about those contributions, however.
@@ -58,4 +58,4 @@ searchHidden: true
          </td>
       </tr>
    </tbody>
-</table>
+</table> -->
