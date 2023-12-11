@@ -1,0 +1,26 @@
+td.piccol {
+  width: 25%;
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+td.textcol {
+  width: 75%;
+  padding: 8px;
+  line-height: 1.428571429;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+td.textcol .inline-image {
+  height: 20px;
+  vertical-align: middle;
+  display: inline;
+}

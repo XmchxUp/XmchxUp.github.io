@@ -126,10 +126,10 @@ params:
 
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
+    #   weight: 10
     - identifier: tags
       name: Tags
       url: /tags/
@@ -138,10 +138,10 @@ menu:
       name: Archives
       url: /archives/
       weight: 30
-    # - identifier: projects
-    #   name: Projects
-    #   url: /projects/
-    # weight: 40
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 40
     - identifier: about
       name: About
       url: /about/
@@ -150,6 +150,9 @@ menu:
       name: Search
       url: /search/
       weight: 60
+    # - name: Discord
+    #   url: https://discord.gg/ahpmTvhVmp
+    #   weight: 70
 
 taxonomies:
   category: categories
