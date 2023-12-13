@@ -16,20 +16,6 @@ searchHidden: true
    <tbody>
       <tr>
          <td class="piccol">
-            <img src="https://cs61a.org/assets/images/logo.png">
-         </td>
-         <td class="textcol">
-            <p>
-               <b ><a href="https://github.com/cs-learning-every-day/cs61a">CS 61A:</a> -  Structure and Interpretation of Computer Programs</b>
-               <img class="inline-image" src="https://skillicons.dev/icons?i=python&theme=light">
-            </p>
-            <p>
-            Python 版的 SICP，会随着实现Project如Ants、Scheme等，学习到有关函数式编程，数据抽象、面向对象等知识。
-            </p>
-         </td>
-      </tr>
-      <tr>
-         <td class="piccol">
             <img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20231212/image.21w4bwpieejk.png">
          </td>
          <td class="textcol">
