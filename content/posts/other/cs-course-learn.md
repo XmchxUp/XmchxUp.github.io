@@ -46,7 +46,7 @@ categories: ['cs']
             </p>
             <p>
             系统入门课，Project有 Snake、Dmalloc、Caching I/O、WeensyOS、Vunmo、Distributed Store。
-            涵盖了C、GDB、Assembly、OS、gRPC、Rust、KV等知识点
+            涵盖了C、GDB、Assembly、OS、gRPC、Rust、KV等知识点。
             </p>
          </td>
       </tr>
@@ -93,7 +93,7 @@ categories: ['cs']
                <img class="inline-image" src="https://skillicons.dev/icons?i=c&theme=light">
             </p>
             <p>
-            C语言入门课程
+            C语言入门课程。
             </p>
          </td>
       </tr>
@@ -107,7 +107,7 @@ categories: ['cs']
                <img class="inline-image" src="https://skillicons.dev/icons?i=bash,vim,git,linux&theme=light">
             </p>
             <p>
-            工具课程，有很多需要熟练掌握的，如Vim、Git、Grep、tmux、Shell配置等
+            工具课程，有很多需要熟练掌握的，如Vim、Git、Grep、tmux、Shell配置等。
             </p>
          </td>
       </tr>
