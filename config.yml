@@ -11,7 +11,7 @@ buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 
-googleAnalytics: "UA-159953206-1"
+googleAnalytics: UA-159953206-1
 # disqusShortname: "blog-evvznokjet"
 
 outputs:
