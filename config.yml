@@ -150,6 +150,12 @@ menu:
       name: Search
       url: /search/
       weight: 60
+    - name: Coding Stats
+      url: https://wakatime.com/@Tesla
+      weight: 70
+    - name: Running Page
+      url: https://xmchxup.github.io/running_page/
+      weight: 80
     # - name: Discord
     #   url: https://discord.gg/ahpmTvhVmp
     #   weight: 70

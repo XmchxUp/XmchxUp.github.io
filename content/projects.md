@@ -8,7 +8,11 @@ searchHidden: true
 ---
 
 <p>
-玩具练习 
+
+玩具练习
+
+此列表只包括一定规模以上的项目；如需更完整的目录，请访问[Github](https://github.com/XmchxUp?tab=repositories&type=source)。
+
 </p>
 
 <br>
