@@ -9,7 +9,7 @@ searchHidden: true
 
 ![partywizard](https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20220310/partywizard.1ma352m1fqgw.gif)
 
-[More Social Information](https://bento.me/huayang)
+[More About Information](https://bento.me/huayang)
 
 # 简介
 
