@@ -13,6 +13,8 @@ searchHidden: true
 
 此列表只包括一定规模以上的项目；如需更完整的目录，请访问[Github](https://github.com/XmchxUp?tab=repositories&type=source)。
 
+[CS 国外课程学习](https://xmchxup.github.io/posts/other/cs-course-learn/)
+
 </p>
 
 <br>
