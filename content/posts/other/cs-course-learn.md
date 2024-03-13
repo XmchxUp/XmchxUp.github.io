@@ -1,16 +1,74 @@
 ---
-author: '韩立'
-title: 'CS国外课程学习'
-date: '2023-12-12'
-description: '^^_^^'
+author: "韩立"
+title: "CS国外课程学习"
+date: "2023-12-12"
+description: "^^_^^"
 ShowBreadCrumbs: false
-tags: ['cs', 'course']
-categories: ['cs']
+tags: ["cs", "course"]
+categories: ["cs"]
 ---
 
 <br>
 <table class="table">
    <tbody>
+      <tr>
+         <td class="piccol">
+            <img src="https://sp21.datastructur.es/assets/img/favicon.ico" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://github.com/XmchxUp/cs61b-code-sp21">
+                     CS 61B: 
+                  </a>
+                  Data Structures and Algorithms
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=java,idea&theme=light">
+            </p>
+            <p>
+            运用数据结构和算法解决实际问题，三个千行项目实现。
+            <a href="https://github.com/cs-learning-every-day?q=cs61b&type=all&language=&sort=">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://reberhardt.com/favicon.ico" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://github.com/cs-learning-every-day/CS110L">
+                     CS 110L: 
+                  </a>
+                  Safety in Systems Programming
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=rust&theme=light">
+            </p>
+            <p>
+            用 Rust 实现一个类似于 GDB 的 debugger/实现一个负载均衡器。
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20240216/image.4nbgc50rtog0.png" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://github.com/cs-learning-every-day/CS144-Fa21">
+                     CS 144:
+                  </a>
+                  Introduction to Computer Networking,
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=cpp,linux&theme=light">
+            </p>
+            <p>
+            用 C++ 循序渐进地搭建出整个 TCP/IP 协议栈，实现 IP 路由以及 ARP 协议。
+            </p>
+         </td>
+      </tr>
       <tr>
          <td class="piccol">
             <img src="http://csapp.cs.cmu.edu/3e/images/csapp3e-cover.jpg" />
@@ -19,7 +77,7 @@ categories: ['cs']
             <p>
                <b >
                   <a href="https://github.com/cs-learning-every-day/csapp">
-                     CMU 15-213: 
+                     CMU 15-213:
                   </a>
                   Computer Systems: A Programmer's Perspective, 3/E (CS:APP3e)
                </b>
@@ -125,5 +183,6 @@ categories: ['cs']
             </p>
          </td>
       </tr>
+
    </tbody>
 </table>
