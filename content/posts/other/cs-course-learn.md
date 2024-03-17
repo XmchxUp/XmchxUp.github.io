@@ -18,7 +18,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/XmchxUp/cs61b-code-sp21">
+                  <a href="https://sp24.datastructur.es/">
                      CS 61B: 
                   </a>
                   Data Structures and Algorithms
@@ -38,7 +38,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/cs-learning-every-day/CS110L">
+                  <a href="https://reberhardt.com/cs110l/spring-2020/">
                      CS 110L: 
                   </a>
                   Safety in Systems Programming
@@ -47,6 +47,7 @@ categories: ["cs"]
             </p>
             <p>
             用 Rust 实现一个类似于 GDB 的 debugger/实现一个负载均衡器。
+            <a href="https://github.com/cs-learning-every-day/CS110L">-></a>
             </p>
          </td>
       </tr>
@@ -57,7 +58,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/cs-learning-every-day/CS144-Fa21">
+                  <a href="https://cs144.github.io/">
                      CS 144:
                   </a>
                   Introduction to Computer Networking,
@@ -66,6 +67,7 @@ categories: ["cs"]
             </p>
             <p>
             用 C++ 循序渐进地搭建出整个 TCP/IP 协议栈，实现 IP 路由以及 ARP 协议。
+            <a href="https://github.com/cs-learning-every-day/CS144-Fa21">-></a>
             </p>
          </td>
       </tr>
@@ -76,7 +78,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/cs-learning-every-day/csapp">
+                  <a href="https://csapp.cs.cmu.edu/">
                      CMU 15-213:
                   </a>
                   Computer Systems: A Programmer's Perspective, 3/E (CS:APP3e)
@@ -85,6 +87,7 @@ categories: ["cs"]
             </p>
             <p>
             系统入门课，课程内容覆盖了汇编语言、体系结构、操作系统、编译链接、并行、网络等，兼具深度和广度。
+            <a href="https://github.com/cs-learning-every-day/csapp">-></a>
             </p>
          </td>
       </tr>
@@ -95,7 +98,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/cs-learning-every-day/cs300">
+                  <a href="https://cs.brown.edu/courses/csci0300/2024/">
                      CSCI 0300:
                   </a>
                   Fundamentals of Computer Systems
@@ -105,6 +108,7 @@ categories: ["cs"]
             <p>
             系统入门课，Project有 Snake、Dmalloc、Caching I/O、WeensyOS、Vunmo、Distributed Store。
             涵盖了C、GDB、Assembly、OS、gRPC、Rust、KV等知识点。
+            <a href="https://github.com/cs-learning-every-day/cs300">-></a>
             </p>
          </td>
       </tr>
@@ -115,7 +119,7 @@ categories: ["cs"]
          <td class="textcol">
             <p>
                <b >
-                  <a href="https://github.com/cs-learning-every-day/nand2tetris">
+                  <a href="https://www.nand2tetris.org/">
                      From Nand to Tetris
                   </a>
                   Building a Modern Computer From First Principles
@@ -124,6 +128,7 @@ categories: ["cs"]
             </p>
             <p>
             基础课程，从硬件到软件，0到1的世界，用与非门构造出逻辑电路，Assembler，VM，PL，编译器，OS。
+            <a href="https://github.com/cs-learning-every-day/nand2tetris">-></a>
             </p>
          </td>
       </tr>
@@ -133,11 +138,15 @@ categories: ["cs"]
          </td>
          <td class="textcol">
             <p>
-               <b ><a href="https://github.com/cs-learning-every-day/programming-language-uw">Programming Languages by UW</a></b>
+               <b >
+                  <a href="https://www.coursera.org/search?query=Programming+Languages">Programming Languages</a>
+                  (A/B/C) by UW
+               </b>
                <img class="inline-image" src="https://skillicons.dev/icons?i=ruby&theme=light">
             </p>
             <p>
             多种编程范式入门，SML、Racket、Ruby。
+            <a href="https://github.com/cs-learning-every-day/programming-language-uw">-></a>
             </p>
          </td>
       </tr>
@@ -147,11 +156,12 @@ categories: ["cs"]
          </td>
          <td class="textcol">
             <p>
-               <b ><a href="https://github.com/cs-learning-every-day/cse251">CSE 251 Programming in C</a></b>
+               <b ><a href="https://www.cse.msu.edu/~cse251/index.html">CSE 251 Programming in C</a></b>
                <img class="inline-image" src="https://skillicons.dev/icons?i=c&theme=light">
             </p>
             <p>
             C语言入门课程。
+            <a href="https://github.com/cs-learning-every-day/cse251">-></a>
             </p>
          </td>
       </tr>
@@ -175,11 +185,12 @@ categories: ["cs"]
          </td>
          <td class="textcol">
             <p>
-               <b ><a href="https://github.com/cs-learning-every-day/cs61a">CS 61A:</a> -  Structure and Interpretation of Computer Programs</b>
+               <b ><a href="https://cs61a.org/">CS 61A:</a> -  Structure and Interpretation of Computer Programs</b>
                <img class="inline-image" src="https://skillicons.dev/icons?i=python&theme=light">
             </p>
             <p>
             Python 版的 SICP，会随着实现Project如Ants、Scheme等，学习到有关函数式编程，数据抽象、面向对象等知识。
+            <a href="https://github.com/cs-learning-every-day/cs61a">-></a>
             </p>
          </td>
       </tr>
