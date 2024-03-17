@@ -8,7 +8,9 @@ tags: ["cs", "course"]
 categories: ["cs"]
 ---
 
+The best thing to do is have fun.
 <br>
+
 <table class="table">
    <tbody>
       <tr>
