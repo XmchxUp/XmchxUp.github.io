@@ -68,7 +68,7 @@ The best thing to do is have fun.
                <img class="inline-image" src="https://skillicons.dev/icons?i=cpp,linux&theme=light">
             </p>
             <p>
-            用 C++ 循序渐进地搭建出整个 TCP/IP 协议栈，实现 IP 路由以及 ARP 协议。
+            用 C++ 循序渐进地搭建出整个 TCP/IP 协议栈，IP 路由以及 ARP 协议。
             <a href="https://github.com/cs-learning-every-day/CS144-Fa21">-></a>
             </p>
          </td>
@@ -178,6 +178,7 @@ The best thing to do is have fun.
             </p>
             <p>
             工具课程，有很多需要熟练掌握的，如Vim、Git、Grep、tmux、Shell配置等。
+            <a href="https://github.com/cs-learning-every-day/missing-semester">-></a>
             </p>
          </td>
       </tr>
