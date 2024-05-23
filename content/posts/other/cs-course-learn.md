@@ -15,6 +15,26 @@ The best thing to do is have fun.
    <tbody>
       <tr>
          <td class="piccol">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPB-sGyH98jQPTOyV99JgqJHJL4qhFNHfLvd5ZG2rS6w&s" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://web.stanford.edu/class/cs106l/">
+                     CS 106L: 
+                  </a>
+                  Standard C++ Programming
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=cpp&theme=light">
+            </p>
+            <p>
+            现代C++基础，两个项目一个有关Wiki BFS算法应用/手写STL HashMap。
+            <a href="https://github.com/cs-learning-every-day/CS106L">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
             <img src="https://sp21.datastructur.es/assets/img/favicon.ico" />
          </td>
          <td class="textcol">
