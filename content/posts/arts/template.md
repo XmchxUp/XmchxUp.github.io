@@ -7,7 +7,6 @@ ShowBreadCrumbs: false
 categories: ["weekly"]
 tags: ["weekly"]
 draft: true
-type: "post"
 ---
 
 每周至少做一个 leetcode 的算法题

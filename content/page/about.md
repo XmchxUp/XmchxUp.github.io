@@ -5,7 +5,6 @@ summary: "about"
 disableShare: true
 draft: false
 searchHidden: true
-type: page
 ---
 
 ![partywizard](https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20220310/partywizard.1ma352m1fqgw.gif)

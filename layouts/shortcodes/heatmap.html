@@ -18,7 +18,7 @@
     // map format {date: [wordcount, link, title]}
     // for more information see https://blog.douchi.space/hugo-blog-heatmap
     var dataMap = new Map();
-    {{ range ((where .Site.RegularPages "Type" "post")) }}
+    {{ range ((where .Site.RegularPages "Type" "posts")) }}
       var key = {{ .Date.Format "2006-01-02" }};
       var value = dataMap.get(key);
       var wordCount = {{ div .WordCount 1000.0 | lang.FormatNumber 1 }};
