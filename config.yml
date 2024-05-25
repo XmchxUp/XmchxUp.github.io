@@ -138,10 +138,6 @@ menu:
       name: Archives
       url: /archives/
       weight: 30
-    - identifier: practice
-      name: Practice
-      url: /practice/
-      weight: 40
     - identifier: about
       name: About
       url: /about/
