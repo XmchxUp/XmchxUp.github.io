@@ -1,12 +1,13 @@
 ---
-author: '韩立'
-title: '2022-10-16 周记 0x002'
-date: '2022-10-16'
-description: 'weekely'
+author: "韩立"
+title: "2022-10-16 周记 0x002"
+date: "2022-10-16"
+description: "weekely"
 ShowBreadCrumbs: false
-categories: ['weekly']
-tags: ['weekly']
+categories: ["weekly"]
+tags: ["weekly"]
 draft: true
+type: "post"
 ---
 
 每周至少做一个 leetcode 的算法题

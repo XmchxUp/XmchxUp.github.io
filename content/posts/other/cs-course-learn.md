@@ -6,6 +6,7 @@ description: "^^_^^"
 ShowBreadCrumbs: false
 tags: ["cs", "course"]
 categories: ["cs"]
+type: "post"
 ---
 
 The best thing to do is have fun.

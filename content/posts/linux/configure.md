@@ -1,10 +1,11 @@
 ---
-author: '韩立'
-title: '配置日记'
-date: '2022-09-21'
-description: '第二次操作失误:cold_sweat:重装了~'
+author: "韩立"
+title: "配置日记"
+date: "2022-09-21"
+description: "第二次操作失误:cold_sweat:重装了~"
 ShowBreadCrumbs: false
-tags: ['configuration']
+tags: ["configuration"]
+type: "post"
 ---
 
 第一次某个电脑清理软件给我 WSL2 全删了，第二次 nt 的去删掉了 ubuntu20 内置的 python3.8(/usr/bin/python3.8、/usr/local/lib/python3.8) 导致包管理错误。[Broken python dependencies after trying to re-install](https://askubuntu.com/questions/1065556/broken-python-dependencies-after-trying-to-re-install)
