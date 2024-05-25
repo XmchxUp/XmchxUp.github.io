@@ -9,16 +9,12 @@ searchHidden: true
 
 ![partywizard](https://cdn.jsdelivr.net/gh/XmchxUp/cloudimg@master/20220310/partywizard.1ma352m1fqgw.gif)
 
-[More About Information](https://bento.me/huayang)
+- 男的，`一菜 🐔`，出生于 21 世纪。
+- 半栈工程师，月薪 2800。
+- 19 岁之前全在打游戏，年少不知什么是学习。
+- 目前正在努力学习，改善习惯中(跑步，读书)。
+- [More About Information](https://bento.me/huayang)
 
-# 简介
+# Footprints
 
-我是华阳，一菜 🐔，出生于 2000 年，23 年本科毕业（（中职 16 - 高职 19 - 本科 21）），半栈工程师，月薪 2800。19 岁之前全在打游戏，无心学习。目前正在努力学习，改善习惯中。
-
-# Skills
-
-- web
-- java
-- golang
-- c/c++
-- python
+<iframe src="https://www.google.com/maps/d/embed?mid=1BLxjUE7a8OrSyOrroMYWKLLilKP7Dpc&ehbc=2E312F" width="640" height="480"></iframe>
