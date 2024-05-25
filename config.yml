@@ -86,8 +86,8 @@ params:
       - 欢迎来到王林修炼日记😍
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/FantasyOverflow"
+    # - name: twitter
+    #   url: "https://twitter.com/FantasyOverflow"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/11415062/huayang"
     - name: github
