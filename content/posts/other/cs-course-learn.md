@@ -25,7 +25,7 @@ The best thing to do is have fun.
                   </a>
                   Great Ideas in Computer Architecture (Machine Structures)
                </b>
-               <img class="inline-image" src="https://skillicons.dev/icons?i=c,assembly&theme=light">
+               <img class="inline-image" src="https://skillicons.dev/icons?i=c&theme=light">
             </p>
             <p>
             编写Risc-V汇编代码，搭建五级流水线CPU，使用OpenMP, SIMD 等方法并行优化矩阵运算，实现一个简易的 Numpy。
