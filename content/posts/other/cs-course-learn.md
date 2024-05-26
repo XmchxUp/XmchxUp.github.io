@@ -15,13 +15,33 @@ The best thing to do is have fun.
    <tbody>
       <tr>
          <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240526/image.39l0jt95n8.png" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://inst.eecs.berkeley.edu/~cs61c/sp22/">
+                     CS 61C: 
+                  </a>
+                  Great Ideas in Computer Architecture (Machine Structures)
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=c,assembly&theme=light">
+            </p>
+            <p>
+            编写Risc-V汇编代码，搭建五级流水线CPU，使用OpenMP, SIMD 等方法并行优化矩阵运算，实现一个简易的 Numpy。
+            <a href="https://github.com/cs-learning-every-day/cs61c-sp22">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPB-sGyH98jQPTOyV99JgqJHJL4qhFNHfLvd5ZG2rS6w&s" />
          </td>
          <td class="textcol">
             <p>
                <b >
                   <a href="https://web.stanford.edu/class/cs106l/">
-                     CS 106L: 
+                     CS 106L:
                   </a>
                   Standard C++ Programming
                </b>
@@ -41,7 +61,7 @@ The best thing to do is have fun.
             <p>
                <b >
                   <a href="https://sp24.datastructur.es/">
-                     CS 61B: 
+                     CS 61B:
                   </a>
                   Data Structures and Algorithms
                </b>
@@ -61,7 +81,7 @@ The best thing to do is have fun.
             <p>
                <b >
                   <a href="https://reberhardt.com/cs110l/spring-2020/">
-                     CS 110L: 
+                     CS 110L:
                   </a>
                   Safety in Systems Programming
                </b>
