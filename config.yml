@@ -38,12 +38,12 @@ params:
 
   disableThemeToggle: false
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
-  ShowToc: true
+  ShowToc: false
   comments: true
   hidemeta: false
 
@@ -84,6 +84,9 @@ params:
     Title: "Hi，道友 \U0001F44B"
     Content: |
       - 欢迎来到王林修炼日记😍
+      - 瞎记: https://ysoding.github.io/#/
+      - Running Page: https://xmchxup.github.io/running_page/
+      - Coding Stats: https://wakatime.com/@Tesla
 
   socialIcons:
     # - name: twitter
@@ -130,10 +133,10 @@ menu:
     #   name: Categories
     #   url: /categories/
     #   weight: 10
-    # - identifier: tags
-    #   name: Tags
-    #   url: /tags/
-    #   weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
     - identifier: archives
       name: Archives
       url: /archives/
@@ -145,15 +148,6 @@ menu:
     - identifier: search
       name: Search
       url: /search/
-      weight: 60
-    - name: 瞎记
-      url: https://ysoding.github.io/#/
-      weight: 70
-    # - name: Coding Stats
-    #   url: https://wakatime.com/@Tesla
-    #   weight: 70
-    - name: Running Page
-      url: https://xmchxup.github.io/running_page/
       weight: 80
     # - name: Discord
     #   url: https://discord.gg/ahpmTvhVmp
