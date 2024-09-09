@@ -15,6 +15,126 @@ The best thing to do is have fun.
    <tbody>
       <tr>
          <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240909/image.lvogtn2zo.webp" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="http://nil.csail.mit.edu/6.5840/2024/schedule.html">
+                     MIT 6.5840:
+                  </a>
+                   Distributed Systems Engineering
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=go&theme=light">
+            </p>
+            <p>
+            Raft/KV-store
+            <a href="https://github.com/cs-learning-every-day/mit-6.5840">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240909/image.4qr9sxcsyu.webp" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://15445.courses.cs.cmu.edu/fall2022/">
+                     CMU 15-445: 
+                  </a>
+                  Introduction to Database System
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=cpp&theme=light">
+            </p>
+            <p>
+            数据库底层实现，Buffer Pool Manager (内存管理), B Plus Tree (存储引擎), Query Executors & Query Optimizer (算子们 & 优化器), Concurrency Control (并发控制)
+            <a href="https://github.com/cs-learning-every-day/cmu15-445-fa22">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240909/image.8ojn9j60m2.webp" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b >
+                  <a href="https://pdos.csail.mit.edu/6.S081/2020/">
+                     MIT 6.S081: 
+                  </a>
+                  Operating System Engineering
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=c&theme=light">
+            </p>
+            <p>
+            xv6 OS，后面可以用Rust重写一个。
+            <a href="https://github.com/cs-learning-every-day/MIT6.S081">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b>
+                  <a href="https://learning.edx.org/course/course-v1:BerkeleyX+CS169.1x+1T2022/home">
+                  UCB CS169: 
+                  </a>
+                  Introduction to Agile Software Development: Tools & Techniques
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=ruby&theme=light">
+            </p>
+            <p>
+            Engineering Software as a Service
+            <a href="https://github.com/cs-learning-every-day/CS169">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240909/image.b8unov1jm.webp" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b>
+                  <a href="https://web.mit.edu/6.031/www/sp22/">
+                     MIT 6.031: 
+                  </a>
+                  Software Construction
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=ts,java&theme=light">
+            </p>
+            <p>
+            一些规范
+            <a href="https://github.com/cs-learning-every-day/mit-6.031">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
+            <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240909/image.92q30hlr2g.webp" />
+         </td>
+         <td class="textcol">
+            <p>
+               <b>
+                  <a href="https://py.mit.edu/fall22">
+                     MIT 6.101: 
+                  </a>
+                  Fundamentals of Programming
+               </b>
+               <img class="inline-image" src="https://skillicons.dev/icons?i=python&theme=light">
+            </p>
+            <p>
+            Audio Processing/Image Processing/Bacon Number/Snekoban/Recipes/Minesweeper/SAT Solver/Autocomplete/Game/LISP Interpreter
+            <a href="https://github.com/cs-learning-every-day/mit-6.101-fa22">-></a>
+            </p>
+         </td>
+      </tr>
+      <tr>
+         <td class="piccol">
             <img src="https://github.com/XmchxUp/picx-images-hosting/raw/master/20240526/image.39l0jt95n8.png" />
          </td>
          <td class="textcol">
