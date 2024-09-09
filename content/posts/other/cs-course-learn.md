@@ -83,7 +83,7 @@ The best thing to do is have fun.
                   <a href="https://learning.edx.org/course/course-v1:BerkeleyX+CS169.1x+1T2022/home">
                   UCB CS169: 
                   </a>
-                  Introduction to Agile Software Development: Tools & Techniques
+                  Software Engineering
                </b>
                <img class="inline-image" src="https://skillicons.dev/icons?i=ruby&theme=light">
             </p>
