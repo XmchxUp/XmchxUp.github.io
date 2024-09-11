@@ -84,7 +84,6 @@ params:
     Title: "Hi，道友 \U0001F44B"
     Content: |
       - 欢迎来到王林修炼日记😍
-      - douban: https://www.douban.com/people/xmchx/
       - 瞎记: https://ysoding.github.io/#/
       - Running Page: https://xmchxup.github.io/running_page/
       - Coding Stats: https://wakatime.com/@Tesla
@@ -100,6 +99,8 @@ params:
       url: mailto:sunhuayangak47@gmail.com
     - name: RSS
       url: "https://xmchxup.github.io/index.xml"
+    - name: douban
+      url: "https://www.douban.com/people/xmchx/"
 
   label:
     text: "王林 | Home"
